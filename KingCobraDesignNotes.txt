@@ -1,0 +1,57 @@
+KingCobra - A Research Software for Distributed Request Service on Cloud with Arbiters
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+--------------------------------------------------------------------------------------------------
+Copyright (C):
+Srinivasan Kannan (alias) Ka.Shrinivaasan (alias) Shrinivas Kannan
+Independent Open Source Developer, Researcher and Consultant
+Ph: 9789346927, 9003082186, 9791165980
+Open Source Products Profile(Krishna iResearch): http://sourceforge.net/users/ka_shrinivaasan, https://www.ohloh.net/accounts/ka_shrinivaasan
+Personal website(research): https://sites.google.com/site/kuja27/
+emails: ka.shrinivaasan@gmail.com, shrinivas.kannan@gmail.com, kashrinivaasan@live.com
+--------------------------------------------------------------------------------------------------
+*****************************************************************************************/
+
+Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
+--------------------------------------------------------------------------
+1. There is a cloud of nodes which execute a set of services from randomly created clients. 
+
+2. This cloud could be on iCloud (AsFer+USBmd+VIRGO) platform or any other opensource cloud platforms like Hadoop Cluster.
+
+3. The Clients are publishers of requests which are of many types:
+	1) Service
+	2) Problem reports
+	3) Suggestions etc.,
+
+4. The Services on the Cloud are Subscribers to these requests of specific type. Thus this is the conventional publisher-subscriber model.
+
+5. The requests flow through cloud using a workqueue (which could be a lowlevel Linux workqueue or some other queuing middleware software). The publishers enqueue and Subscribers dequeue the requests.
+
+6. The difference is that the Cloud has nodes that "deceive" or "corrupt". 
+
+7. Service requests - are published by the clients in the need of a service which could be defined by markup file. These requests are scheduled and routed by the middleware to competent authority which services it (with or without timeframe) and replies to the client.
+
+8. Problem reports - are published by clients which are "dissatisfied" by the quality of service by the cloud. These are analyzed by "arbiters" in the cloud which find the faulting node and take action. This allows manual intervention but minimizes it.
+
+9. Suggestions - are enhancement requests sent by clients and require manual intervention.
+
+10. Cloud nodes have a Quality of Service metric calculated by a model.
+
+11. The cloud has a reporting structure of nodes - either as a graph or tree. The graph is dynamically reorganized by weighting the Quality of Service of each node.
+
+12. The difficult part of the above is using Arbiters to find "faulty" nodes based on problem reports from clients.  
+
+
+
