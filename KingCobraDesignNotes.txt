@@ -26,6 +26,10 @@ emails: ka.shrinivaasan@gmail.com, shrinivas.kannan@gmail.com, kashrinivaasan@li
 
 Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 --------------------------------------------------------------------------
+
+[This is a major revision and continuation of COBRA project done by the author in his BE (1995-1999) along with few other esteemed classmates.
+http://sourceforge.net/projects/acadpdrafts/files/Excerpts_Of_PSG_BE_FinalProject_COBRA_done_in_1999.pdf/download]
+
 1. There is a cloud of nodes which execute a set of services from randomly created clients. 
 
 2. This cloud could be on iCloud (AsFer+USBmd+VIRGO) platform or any other opensource cloud platforms like Hadoop Cluster.
