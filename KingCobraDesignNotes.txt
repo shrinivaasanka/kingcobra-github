@@ -53,5 +53,11 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 
 12. The difficult part of the above is using Arbiters to find "faulty" nodes based on problem reports from clients.  
 
+13. Brewer's CAP conjecture proved by [GilbertLynch] as a theorem states that only 2 of the 3 (Consistency of data, Avaliability of data and Partition tolerance when some nodes are messages are lost) can be guaranteed and not all 3 are simultaneously achievable. 
 
+14. CAP theorem does not seem to apply to the above faulty scenario with corrupt nodes under Consistency or Availablity or Partition Tolerance. This is because a corrupt node can have all any 2 of the 3 - it can give consistent data, is available with success response or can make the cloud work with missing data in partition tolerance but yet can "corrupt" the cloud. Probably this needs to be defined as a new attribute called Integrity.
+
+15. As "corruption" is more conspicuous with monetary element, if above services are "charged" with a logical currency (e.g. bitcoin), then corruption in cloud is defineable as (but not limited to)- "Undue favour or harm meted out to a client not commensurate with the charge for the service (or) unreasonable extra logical currency demanded to execute the service of same quality (or) deliberate obstruction of justice to a client with malevolent and unholy collusion with other cloud nodes with feigned CAP".
+
+16. Identifying criminal nodes as in (15) above seems to be beyond the ambit of CAP.
 
