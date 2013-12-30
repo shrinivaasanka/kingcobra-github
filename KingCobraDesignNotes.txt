@@ -69,3 +69,5 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 18. Policing the cloud nodes with arbiters - This seems to be limited by CAP theorem and Integrity as above. 
 
 19. Brooks-Iyengar algorithm for sensors in all cloud nodes is an improved Byazantine Fault Tolerant algorithm.
+
+20. BitCoin is a Byzantine Fault Tolerant protocol.
