@@ -27,7 +27,7 @@ emails: ka.shrinivaasan@gmail.com, shrinivas.kannan@gmail.com, kashrinivaasan@li
 Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 --------------------------------------------------------------------------
 
-[This is a major research oriented extension of iCloud(AsFer+USBmd+VIRGO) and COBRA project (done by the author in his BE (1995-1999) along with few other esteemed classmates. http://sourceforge.net/projects/acadpdrafts/files/Excerpts_Of_PSG_BE_FinalProject_COBRA_done_in_1999.pdf/download.]
+[This is a major research oriented extension of iCloud(AsFer+USBmd+VIRGO) and COBRA project (done by the author in his BE (1995-1999) along with few other esteemed classmates. http://sourceforge.net/projects/acadpdrafts/files/Excerpts_Of_PSG_BE_FinalProject_COBRA_done_in_1999.pdf/download.)]
 
 1. There is a cloud of nodes which execute a set of services from randomly created clients. 
 
@@ -40,7 +40,7 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 
 4. The Services on the Cloud are Subscribers to these requests of specific type. Thus this is the conventional publisher-subscriber model.
 
-5. The requests flow through cloud using a workqueue (which could be a lowlevel Linux workqueue or some other queuing middleware software). The publishers enqueue and Subscribers dequeue the requests.
+5. The requests flow through cloud using a workqueue (which could be a lowlevel Linux workqueue or VIRGO queue or some other queuing middleware software like ActiveMQ). The publishers enqueue and Subscribers dequeue the requests.
 
 6. The difference is that the Cloud has nodes that "deceive" or "corrupt". 
 
