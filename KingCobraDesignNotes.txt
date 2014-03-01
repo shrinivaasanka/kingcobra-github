@@ -73,3 +73,8 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 20. BitCoin is a Byzantine Fault Tolerant protocol.
 
 21. Byzantine Fault Tolerance in Clouds is described in http://www.computer.org/csdl/proceedings/cloud/2011/4460/00/4460a444-abs.html, http://www.eurecom.fr/~vukolic/ByzantineEmpire.pdf which is more on Cloud of Clouds - Intercloud with cloud nodes that have malicious or corrupt software. Most of the key-value(get/set) implementations do not have byzantine nodes (for example CAP without Byzantine nodes in Amazon Dynamo: http://www.eurecom.fr/~michiard/teaching/slides/clouds/cap-dynamo.pdf)
+
+-----------------------------------------------
+Commits as on 1 March 2014
+-----------------------------------------------
+Example java Publisher and Listeners that use ActiveMQ as the messaging middleware have been committed to repository for an ActiveMQ queue instance created for KingCobra. For multiple clients this might have to be a Topic rather than Queue instance. Request types above and a workflow framework can be added on this. This will be a JMS compliant implementation which might have slow down compared to a linux workqueue or queue implementation being done in VIRGO.
