@@ -82,3 +82,8 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 Commits as on 1 March 2014
 -----------------------------------------------
 Example java Publisher and Listeners that use ActiveMQ as the messaging middleware have been committed to repository for an ActiveMQ queue instance created for KingCobra. For multiple clients this might have to be a Topic rather than Queue instance. Request types above and a workflow framework can be added on this. This will be a JMS compliant implementation which might slow down compared to a linux workqueue or queue implementation being done in VIRGO.
+----------------------------------------------
+Commits as on 17 March 2014
+---------------------------------------------
+KingCobra userspace library and kernelspace driver module have been implemented that are invoked 1) either in usermode by call_usermodehelper()
+2) or through intermodule invocation through exported symbols in KingCobra kernel module, by the workqueue handler in VIRGO workqueue implementation.
