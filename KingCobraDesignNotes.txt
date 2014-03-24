@@ -33,10 +33,7 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 
 2. This cloud could be on iCloud (AsFer+USBmd+VIRGO) platform or any other opensource cloud platforms like Hadoop Cluster.
 
-3. The Clients are publishers of requests which are of many types:
-	1) Service
-	2) Problem reports
-	3) Suggestions etc.,
+3. The Clients are publishers of Service requests which are of many types -  miscellaneous types of Service that could be dynamically added through other kernel modules and invoked through a switch-case or embedded in function itself. Identified by unique id(s) for different types of services (for example Problem reports, Suggestions etc.,)
 
 4. The Services on the Cloud are Subscribers to these requests of specific type. Thus this is the conventional publisher-subscriber model.
 
@@ -77,6 +74,21 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 22. The problem of fact finding or fault finding using a cloud police has the same limitation as the "perfect inference" described in http://sourceforge.net/p/asfer/code/HEAD/tree/AstroInferDesign.txt
 
 23. Reference article on cloud BFT for Byzantine, Corrupt brokers - Byzantine Fault-Tolerant Publish/Subscribe: A Cloud Computing Infrastructure (www.ux.uis.no/~meling/papers/2012-bftps-srdsw.pdf) 
+
+---------------------------------------------------------------
+24. KingCobra messaging request-response design - options
+--------------------------------------------------------------- 
+
+24a. Implementing a message subscription model in kernelspace where clients publish the message that is queued-in to subscribers' queue (Topic like implementation - use of ActiveMQ C implementation if available).
+
+24b. (ONGOING) At present a minimum kernelspace messaging system that queues remote request and handles through workqueue handler is in place. This does not respond to the client once the Kingcobra servicerequest function finishes processing the request. Unlike the usual messaging server, in which client publishes messages of a particular type that are listened to by interested clients, one option is to continue the status-quo of KingCobra as a peer-to-peer messaging system. Thus every VIRGO node is both a kernelspace messaging client and server that can both publish and listen. Every message in the cloud can have a unique id assigned by a timestamp server (similar to bitcoin protocol) so that each message floating in the cloud is unique across the cloud (or) no two messages on the VIRGO cloud are same. The recipient node executing kingcobra_servicerequest_kernelspace() parses the unique-id (example naive unique-id is <ip-address:port>#localtimestampofmachine) from the incoming remote request and responds to the remote client through kernel socket connection  that gets queued-in the remote client and handled similar to incoming remote request. To differentiate request and response-for-request response messages are padded with a string "REPLY:<unique-id-of-message>" and requests are padded with "REQUEST:<unique-id-of-message>". This is more or less similar to TCP flow-control with SEQ numbers but state-less like UDP. Simple analogy is post-office protocol with reference numbers for each mail and its reply. Thus there are chronologically two queues: (1) queue at the remote VIRGO cloud service node for request (2) queue at the remote client for response to the request sent in (1).
+
+	KingCobraClient ===========<REQUEST:id>===============================> KingCobraServiceQ
+        KingCobraResponseQ								 ||
+	       ||				 				   	 ||	
+		<==================<REPLY:id>============================================ V
+
+24c.Above option 24b implements a simple p2p queue messaging in kernel. To get a Topic-like behaviour in VIRGO queue might be difficult as queue_work() kernel function has to be invoked repeatedly invoked for the same work_struct on multiple queues which are subscribers of that message in AMQ protocol. Moreover creating a queue at runtime on need basis looks difficult in kernel. 
 
 -----------------------------------------------
 Commits as on 1 March 2014
