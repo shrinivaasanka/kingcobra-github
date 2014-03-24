@@ -88,7 +88,7 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 	       ||				 				   	 ||	
 		<==================<REPLY:id>============================================ V
 
-24c.Above option 24b implements a simple p2p queue messaging in kernel. To get a Topic-like behaviour in VIRGO queue might be difficult as queue_work() kernel function has to be invoked repeatedly invoked for the same work_struct on multiple queues which are subscribers of that message in AMQ protocol. Moreover creating a queue at runtime on need basis looks difficult in kernel. 
+24c.Above option 24b implements a simple p2p queue messaging in kernel. To get a Topic-like behaviour in VIRGO queue might be difficult as queue_work() kernel function has to be repeatedly invoked for the same work_struct on multiple queues which are subscribers of that message in AMQ protocol. Moreover creating a queue at runtime on need basis looks difficult in kernel which is usually done through some CLI or GUI interface in ActiveMQ and other messaging servers. 
 
 -----------------------------------------------
 Commits as on 1 March 2014
