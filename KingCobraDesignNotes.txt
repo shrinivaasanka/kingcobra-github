@@ -83,15 +83,25 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 
 24b. (ONGOING) At present a minimum kernelspace messaging system that queues remote request and handles through workqueue handler is in place. This does not respond to the client once the Kingcobra servicerequest function finishes processing the request. Unlike the usual messaging server, in which client publishes messages of a particular type that are listened to by interested clients, one option is to continue the status-quo of KingCobra as a peer-to-peer messaging system. Thus every VIRGO node is both a kernelspace messaging client and server that can both publish and listen. Every message in the cloud can have a unique id assigned by a timestamp server (similar to bitcoin protocol) so that each message floating in the cloud is unique across the cloud (or) no two messages on the VIRGO cloud are same. The recipient node executing kingcobra_servicerequest_kernelspace() parses the unique-id (example naive unique-id is <ip-address:port>#localtimestampofmachine) from the incoming remote request and responds to the remote client through kernel socket connection  that gets queued-in the remote client and handled similar to incoming remote request. To differentiate request and response-for-request response messages are padded with a string "REPLY:<unique-id-of-message>" and requests are padded with "REQUEST:<unique-id-of-message>". This is more or less similar to TCP flow-control with SEQ numbers but state-less like UDP. Simple analogy is post-office protocol with reference numbers for each mail and its reply. Thus there are chronologically two queues: (1) queue at the remote VIRGO cloud service node for request (2) queue at the remote client for response to the request sent in (1).
 
-	KingCobraClient ==========>=<REQUEST:id>===================> VIRGO cloudexec service =====> VIRGO Queue ============> KingCobraService
+-----------------------------------------------------------------------------------------------------
+25c. KingCobra - VIRGO queue - VIRGO cpupooling and mempooling drivers interaction schematic diagram:
+-----------------------------------------------------------------------------------------------------
+
+	KingCobraClient ==========>=<REQUEST:id>===================> VIRGO cpupooling service =====> VIRGO Queue ============> KingCobraService
                ||								       					         ||
 	       ||				 				   	 					 ||	
-		<================= VIRGO Queue <====== VIRGO cloudexec service ====<REPLY:id>==================================== V
+		<================= VIRGO Queue <====== VIRGO cpupooling service ====<REPLY:id>=================================== V
+	
+	KingCobraClient ==========>=<REQUEST:id>===================> VIRGO mempooling service =====> VIRGO Queue ============> KingCobraService
+               ||								       					         ||
+	       ||				 				   	 					 ||	
+		<================= VIRGO Queue <====== VIRGO mempooling service ====<REPLY:id>==================================== V
+
 
 kingcobra_servicerequest_kernelspace() distinguishes the "REQUEST" and "REPLY" and optionally persists them to corresponding on-disk filesystem.
 Thus a disk persistence for the queued messages can either be implemented in 1) VIRGO queue driver 2)  workqueue.c (kernel itself needs a rewrite (or) 3) KingCobra driver. Option (2) is difficult in the sense that it could impact the kernel as-a-whole whereas 1) and 3) are modularized.
 
-24c.Above option 24b implements a simple p2p queue messaging in kernel. To get a Topic-like behaviour in VIRGO queue might be difficult as queue_work() kernel function has to be repeatedly invoked for the same work_struct on multiple queues which are subscribers of that message in AMQ protocol. Moreover creating a queue at runtime on need basis looks difficult in kernel which is usually done through some CLI or GUI interface in ActiveMQ and other messaging servers. 
+24d.Above option 24b implements a simple p2p queue messaging in kernel. To get a Topic-like behaviour in VIRGO queue might be difficult as queue_work() kernel function has to be repeatedly invoked for the same work_struct on multiple queues which are subscribers of that message in AMQ protocol. Moreover creating a queue at runtime on need basis looks difficult in kernel which is usually done through some CLI or GUI interface in ActiveMQ and other messaging servers. 
 
 -----------------------------------------------
 Commits as on 1 March 2014
@@ -112,4 +122,9 @@ Minimalistic Kernelspace messaging server framework with kernel workqueue,handle
 Commits as on 29 March 2014
 ----------------------------------------------
 Initial commits for KingCobra Request Response done by adding 2 new functions parse_ip_address() and reply_to_publisher() in kingcobra_servicerequest_kernelspace()
+
+--------------------------------------------
+Commits as on 30 March 2014
+--------------------------------------------
+Both VIRGO cpupooling and mempooling drivers have been modified with use_as_kingcobra_service boolean flag for sending incoming remote cloud node requests to VIRGO queue which is serviced by workqueue handler and KingCobra service as per the above schematic diagram and replied to.
 
