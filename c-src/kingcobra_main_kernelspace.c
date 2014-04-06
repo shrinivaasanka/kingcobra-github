@@ -65,7 +65,7 @@ void kingcobra_servicerequest_kernelspace(void* args)
 	printk(KERN_INFO "kingcobra_servicerequest_kernelspace(): KingCobra service request received from kernel KingCobra workqueue: %s\n",(char*)args);
 	long client_ip_l=parse_ip_address((char*)args);
 	char* response=kmalloc(KCOBRA_BUF_SIZE,GFP_ATOMIC);
-	sprintf(response, "kingcobra_servicerequest_kernelspace(): REPLY:from kingcobra_servicerequest_kernelspace() to client_ip=%x",client_ip_l);
+	sprintf(response, "REPLY#%x# from kingcobra_servicerequest_kernelspace() to client",client_ip_l);
 	reply_to_publisher(client_ip_l,response);
 }
 EXPORT_SYMBOL(kingcobra_servicerequest_kernelspace);
@@ -75,6 +75,9 @@ long parse_ip_address(char* request)
 	char* delim="#";
 	char* token=NULL;
 	char* request_dup=kstrdup(request,GFP_ATOMIC);
+	printk(KERN_INFO "parse_ip_address(): request_dup = %s\n",request_dup);
+	char* request_header=strsep(&request_dup,delim);
+	printk(KERN_INFO "parse_ip_address(): request_header= %s\n", request_header);
 	token=strsep(&request_dup,delim);
 	printk(KERN_INFO "parse_ip_address(): token = %s\n",token);
 	unsigned long ll2;
