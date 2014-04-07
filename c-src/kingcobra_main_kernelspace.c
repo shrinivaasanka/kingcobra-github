@@ -64,11 +64,24 @@ void kingcobra_servicerequest_kernelspace(void* args)
 {
 	printk(KERN_INFO "kingcobra_servicerequest_kernelspace(): KingCobra service request received from kernel KingCobra workqueue: %s\n",(char*)args);
 	long client_ip_l=parse_ip_address((char*)args);
+	char* logicaltimestamp=parse_timestamp((char*)args);
 	char* response=kmalloc(KCOBRA_BUF_SIZE,GFP_ATOMIC);
-	sprintf(response, "REPLY#%x# from kingcobra_servicerequest_kernelspace() to client",client_ip_l);
+	sprintf(response, "REPLY#%x#%s :--- from kingcobra_servicerequest_kernelspace() to client",client_ip_l,logicaltimestamp);
 	reply_to_publisher(client_ip_l,response);
 }
 EXPORT_SYMBOL(kingcobra_servicerequest_kernelspace);
+
+char* parse_timestamp(char* request)
+{
+	char* delim="#";
+	char* timestamp=NULL;
+	char* request_dup=kstrdup(request,GFP_ATOMIC);
+	strsep(&request_dup,delim);
+	strsep(&request_dup,delim);
+	timestamp=kstrdup(strsep(&request_dup,delim),GFP_ATOMIC);
+	printk(KERN_INFO "parse_timestamp(): timestamp parsed from request header = %s\n",timestamp);
+	return timestamp;
+}
 
 long parse_ip_address(char* request)
 {
@@ -126,17 +139,17 @@ void reply_to_publisher(long client_ip_l, char *response)
 
 	strcpy(iov.iov_base, response);
 	error = sock_create_kern(AF_INET, SOCK_STREAM, IPPROTO_TCP, &sock);
-	printk(KERN_INFO "reply_to_publisher() syscall: created client kernel socket\n");
+	printk(KERN_INFO "reply_to_publisher() : created client kernel socket\n");
 	kernel_connect(sock, (struct sockaddr*)&sin, sizeof(sin) , 0);
-	printk(KERN_INFO "reply_to_publisher() syscall: connected kernel client to virgo cloudexec kernel service\n ");
+	printk(KERN_INFO "reply_to_publisher() : connected kernel client to virgo cloudexec kernel service\n ");
 	kernel_sendmsg(sock, &msg, &iov, nr, KCOBRA_BUF_SIZE);
-	printk(KERN_INFO "reply_to_publisher() syscall: sent message: %s \n", buf);
+	printk(KERN_INFO "reply_to_publisher() : sent message: %s \n", buf);
         len  = kernel_recvmsg(sock, &msg, &iov, nr, KCOBRA_BUF_SIZE, msg.msg_flags);
-	printk(KERN_INFO "reply_to_publisher() syscall: received message: %s \n", buf);
+	printk(KERN_INFO "reply_to_publisher() : received message: %s \n", buf);
         le32_to_cpus(buf);
-	printk(KERN_INFO "reply_to_publisher() syscall: le32_to_cpus(buf): %s \n", buf);
+	printk(KERN_INFO "reply_to_publisher() : le32_to_cpus(buf): %s \n", buf);
 	sock_release(sock);
-	printk(KERN_INFO "reply_to_publisher() syscall: reply_to_publisher() client socket_release() invoked\n");
+	printk(KERN_INFO "reply_to_publisher() : reply_to_publisher() client socket_release() invoked\n");
 	
 	return len;
 }
