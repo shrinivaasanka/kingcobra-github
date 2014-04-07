@@ -135,3 +135,8 @@ Commits as on 6 April 2014
 --------------------------------------------
 Fixes for REQUEST and REPLY headers for KingCobra has been made in virgo_cloudexec_mempool recvfrom() if clause and in request parser in KingCobra with strsep(). This has been implemented only in VIRGO mempool codepath and not in VIRGO clone.
 
+-------------------------------------------
+Commits as on 7 April 2014
+-------------------------------------------
+New function parse_timestamp() has been added to retrieve the timestamp set by the VIRGO mempool driver before pushing the request to VIRGO queue driver
+
