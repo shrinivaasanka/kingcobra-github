@@ -35,6 +35,7 @@ __attribute__((section("__versions"))) = {
 	{ 0x68d4fad5, "call_usermodehelper_fns" },
 	{ 0xac518073, "kmem_cache_alloc_trace" },
 	{ 0xd206e501, "kernel_recvmsg" },
+	{ 0x51bd0a05, "vfs_write" },
 	{ 0xe914e41e, "strcpy" },
 	{ 0x95a608a3, "filp_open" },
 };
@@ -45,4 +46,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "4925392E88BF797021F8EA5");
+MODULE_INFO(srcversion, "B8DE28FFE00EE1C7B0ABD5A");
