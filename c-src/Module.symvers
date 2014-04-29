@@ -1,3 +1,3 @@
 0xe3fe0694	kingcobra_servicerequest_kernelspace	/home/kashrinivaasan/linux-3.7.8/drivers/kingcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
-0x20350e7e	kingcobra_kernelspace_exit	/home/kashrinivaasan/linux-3.7.8/drivers/kingcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
 0xe4de3087	kingcobra_kernelspace_init	/home/kashrinivaasan/linux-3.7.8/drivers/kingcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
+0x20350e7e	kingcobra_kernelspace_exit	/home/kashrinivaasan/linux-3.7.8/drivers/kingcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
