@@ -46,6 +46,16 @@ static int __init
 kingcobra_kernelspace_init(void)
 {
 	printk(KERN_INFO "kingcobra_kernelspace_init(): initializing KingCobra kernel module\n");
+        loff_t bytesread=0;
+        loff_t pos=0;
+        /*mm_segment_t fs;*/
+        fs=get_fs();
+        set_fs(get_ds());
+	if(kingcobra_disk_persistence==1)
+	{
+		printk(KERN_INFO "kingcobra_kernelspace_init(): Initializing disk persistence file for KingCobra\n");
+        	request_reply_queue=filp_open("/var/log/kingcobra/REQUEST_REPLY.queue", O_WRONLY|O_APPEND, 0777);
+	}
 	return 0;
 }
 EXPORT_SYMBOL(kingcobra_kernelspace_init);
@@ -55,6 +65,8 @@ static void __exit
 kingcobra_kernelspace_exit(void)
 {
 	printk(KERN_INFO "kingcobra_kernelspace_exit(): exiting KingCobra kernel module \n");
+	filp_close(request_reply_queue,NULL);
+	set_fs(fs);
 	do_exit(1);
 }
 EXPORT_SYMBOL(kingcobra_kernelspace_exit);
@@ -63,6 +75,15 @@ EXPORT_SYMBOL(kingcobra_kernelspace_exit);
 void kingcobra_servicerequest_kernelspace(void* args)
 {
 	printk(KERN_INFO "kingcobra_servicerequest_kernelspace(): KingCobra service request received from kernel KingCobra workqueue: %s\n",(char*)args);
+	if(kingcobra_disk_persistence==1)
+	{
+		char buf[256];
+		/*loff_t pos;*/
+		sprintf(buf, "%s $$\n",(char*)args);
+		printk(KERN_INFO "kingcobra_servicerequest_kernelspace(): disk persistence enabled, writing incoming request to KingCobra disk file:%s\n",buf);
+		vfs_write(request_reply_queue, buf, 256, &request_reply_queue_pos);
+		request_reply_queue_pos+=256;
+	}
 	long client_ip_l=parse_ip_address((char*)args);
 	char* logicaltimestamp=parse_timestamp((char*)args);
 	char* response=kmalloc(KCOBRA_BUF_SIZE,GFP_ATOMIC);
