@@ -135,6 +135,22 @@ In the above schematic, money with unique id in cloud reaches a buyer after many
 	-----------------------------------------------------------------------------------------------------
 Obviously the above recursion combinatorially explodes into exponential number of nodes in the recursion tree. Ideally recursion has to go deep upto quarks and leptons that makeup the standard model. If for practical purposes, recursion depth is restricted to t then size of value() tree is O(m^t) where m is average number of ingredients per component. Hence any algorithm computing the value() recursion has to be exponential in time. Computation of value() in the leaf nodes of the recursion is most crucial as they percolate bottom-up. If leaf nodes of all possible items are same (like quarks and leptons making up universe) then such atomic ingredient has to have "same" value for all items. Only the integration cost varies in the levels of the tree.
 
+31. (THEORY) Buyer-Seller and MAC electronic money transaction schematic:
+-------------------------------------------------------------------------
+	
+	Buyer     	 A-------<id><refcnt:0>----------------------> Seller <id><refcnt:1> (increments refcnt)
+	(<id><refcnt:1>  |
+	 <id><refcnt:0>  |
+	after decrement  |
+	refcnt           |
+	)---------------->
+Above has to be transactional (i.e atomic across cloud nodes)
+
+32. (THEORY) MAC protocol reaper
+--------------------------------
+	Reaper thread in each cloud node harvests the zero refcounted allocations and invokes destructors on them. Same  MAC id cannot
+have kref count of 1 or above in more than one cloud node due to the transaction mentioned previously.
+
 -----------------------------------------------
 Commits as on 1 March 2014
 -----------------------------------------------
