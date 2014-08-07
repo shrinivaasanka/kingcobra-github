@@ -4,7 +4,7 @@
 
 MODULE_INFO(vermagic, VERMAGIC_STRING);
 
-struct module __this_module
+__visible struct module __this_module
 __attribute__((section(".gnu.linkonce.this_module"))) = {
 	.name = KBUILD_MODNAME,
 	.init = init_module,
@@ -17,27 +17,30 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0x8a9dc593, "module_layout" },
-	{ 0xb1278c61, "kmalloc_caches" },
-	{ 0x4f84ad10, "kernel_sendmsg" },
-	{ 0x779a18af, "kstrtoll" },
-	{ 0xd3fc9f1a, "sock_release" },
-	{ 0x143054c, "filp_close" },
-	{ 0x794f5965, "sock_create_kern" },
-	{ 0x85df9b6c, "strsep" },
-	{ 0x91715312, "sprintf" },
-	{ 0xc499ae1e, "kstrdup" },
-	{ 0x8648556d, "kernel_connect" },
-	{ 0x50eedeb8, "printk" },
-	{ 0xb4390f9a, "mcount" },
-	{ 0x952664c5, "do_exit" },
-	{ 0xf0fdf6cb, "__stack_chk_fail" },
-	{ 0x68d4fad5, "call_usermodehelper_fns" },
-	{ 0xac518073, "kmem_cache_alloc_trace" },
-	{ 0xd206e501, "kernel_recvmsg" },
-	{ 0x51bd0a05, "vfs_write" },
-	{ 0xe914e41e, "strcpy" },
-	{ 0x95a608a3, "filp_open" },
+	{ 0x1b24d8b0, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xabcda7ae, __VMLINUX_SYMBOL_STR(kmalloc_caches) },
+	{ 0x4c4fef19, __VMLINUX_SYMBOL_STR(kernel_stack) },
+	{ 0xfa8ad6e7, __VMLINUX_SYMBOL_STR(kernel_sendmsg) },
+	{ 0x779a18af, __VMLINUX_SYMBOL_STR(kstrtoll) },
+	{ 0xf0d24d50, __VMLINUX_SYMBOL_STR(sock_release) },
+	{ 0x333422b, __VMLINUX_SYMBOL_STR(filp_close) },
+	{ 0x59e6046c, __VMLINUX_SYMBOL_STR(sock_create_kern) },
+	{ 0x85df9b6c, __VMLINUX_SYMBOL_STR(strsep) },
+	{ 0x91715312, __VMLINUX_SYMBOL_STR(sprintf) },
+	{ 0xc499ae1e, __VMLINUX_SYMBOL_STR(kstrdup) },
+	{ 0x6f592242, __VMLINUX_SYMBOL_STR(kernel_connect) },
+	{ 0x50eedeb8, __VMLINUX_SYMBOL_STR(printk) },
+	{ 0xb4390f9a, __VMLINUX_SYMBOL_STR(mcount) },
+	{ 0xc5fdef94, __VMLINUX_SYMBOL_STR(call_usermodehelper) },
+	{ 0x952664c5, __VMLINUX_SYMBOL_STR(do_exit) },
+	{ 0x37c3e76, __VMLINUX_SYMBOL_STR(__gcov_merge_add) },
+	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
+	{ 0xdceb3072, __VMLINUX_SYMBOL_STR(__gcov_init) },
+	{ 0x133375cb, __VMLINUX_SYMBOL_STR(kmem_cache_alloc_trace) },
+	{ 0xd93e4b5a, __VMLINUX_SYMBOL_STR(kernel_recvmsg) },
+	{ 0xe553410a, __VMLINUX_SYMBOL_STR(vfs_write) },
+	{ 0xe914e41e, __VMLINUX_SYMBOL_STR(strcpy) },
+	{ 0x6b7f0b64, __VMLINUX_SYMBOL_STR(filp_open) },
 };
 
 static const char __module_depends[]
