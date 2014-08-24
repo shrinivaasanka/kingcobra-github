@@ -75,7 +75,7 @@ EXPORT_SYMBOL(kingcobra_kernelspace_exit);
 void kingcobra_servicerequest_kernelspace(void* args)
 {
 	printk(KERN_INFO "kingcobra_servicerequest_kernelspace(): KingCobra service request received from kernel KingCobra workqueue: %s\n",(char*)args);
-	if(kingcobra_disk_persistence==1)
+	if(kingcobra_disk_persistence==1 && args != NULL)
 	{
 		char buf[256];
 		/*loff_t pos;*/
