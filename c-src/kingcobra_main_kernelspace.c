@@ -48,14 +48,22 @@ kingcobra_kernelspace_init(void)
 	printk(KERN_INFO "kingcobra_kernelspace_init(): initializing KingCobra kernel module\n");
         loff_t bytesread=0;
         loff_t pos=0;
-        /*mm_segment_t fs;*/
+        mm_segment_t fs;
         fs=get_fs();
         set_fs(get_ds());
+	int filp_ret;
 	if(kingcobra_disk_persistence==1)
 	{
 		printk(KERN_INFO "kingcobra_kernelspace_init(): Initializing disk persistence file for KingCobra\n");
-        	request_reply_queue=filp_open("/var/log/kingcobra/REQUEST_REPLY.queue", O_WRONLY|O_APPEND, 0777);
+        	request_reply_queue=filp_open("/tmp/REQUEST_REPLY.queue", O_RDWR | O_CREAT | O_APPEND | O_LARGEFILE , 0755);
+		if(IS_ERR(request_reply_queue))
+		{
+			filp_ret=PTR_ERR(request_reply_queue);	
+			printk(KERN_INFO "kingcobra_kernelspace_init(): disk queue file open error=%d\n",filp_ret);
+		}
 	}
+	kingcobra_servicerequest_kernelspace("REQUEST#1000000#1408964032:335925644#kingcobra_kernelspace_init");
+	set_fs(fs);
 	return 0;
 }
 EXPORT_SYMBOL(kingcobra_kernelspace_init);
@@ -64,6 +72,9 @@ EXPORT_SYMBOL(kingcobra_kernelspace_init);
 static void __exit
 kingcobra_kernelspace_exit(void)
 {
+	mm_segment_t fs;
+        fs=get_fs();
+        set_fs(get_ds());
 	printk(KERN_INFO "kingcobra_kernelspace_exit(): exiting KingCobra kernel module \n");
 	filp_close(request_reply_queue,NULL);
 	set_fs(fs);
@@ -74,21 +85,25 @@ EXPORT_SYMBOL(kingcobra_kernelspace_exit);
 
 void kingcobra_servicerequest_kernelspace(void* args)
 {
+        mm_segment_t fs;
+	char buf[256];
+        fs=get_fs();
+        set_fs(get_ds());
 	printk(KERN_INFO "kingcobra_servicerequest_kernelspace(): KingCobra service request received from kernel KingCobra workqueue: %s\n",(char*)args);
 	if(kingcobra_disk_persistence==1 && args != NULL)
 	{
-		char buf[256];
 		/*loff_t pos;*/
 		sprintf(buf, "%s $$\n",(char*)args);
 		printk(KERN_INFO "kingcobra_servicerequest_kernelspace(): disk persistence enabled, writing incoming request to KingCobra disk file:%s\n",buf);
 		vfs_write(request_reply_queue, buf, 256, &request_reply_queue_pos);
 		request_reply_queue_pos+=256;
 	}
-	long client_ip_l=parse_ip_address((char*)args);
-	char* logicaltimestamp=parse_timestamp((char*)args);
+	long client_ip_l=parse_ip_address(kstrdup((char*)args,GFP_ATOMIC));
+	char* logicaltimestamp=parse_timestamp(kstrdup(buf,GFP_ATOMIC));
 	char* response=kmalloc(KCOBRA_BUF_SIZE,GFP_ATOMIC);
 	sprintf(response, "REPLY#%x#%s :--- from kingcobra_servicerequest_kernelspace() to client",client_ip_l,logicaltimestamp);
 	reply_to_publisher(client_ip_l,response);
+	set_fs(fs);
 }
 EXPORT_SYMBOL(kingcobra_servicerequest_kernelspace);
 
@@ -96,11 +111,16 @@ char* parse_timestamp(char* request)
 {
 	char* delim="#";
 	char* timestamp=NULL;
+	char* requestheader;
+	char* ipaddr;
 	char* request_dup=kstrdup(request,GFP_ATOMIC);
-	strsep(&request_dup,delim);
-	strsep(&request_dup,delim);
-	timestamp=kstrdup(strsep(&request_dup,delim),GFP_ATOMIC);
-	printk(KERN_INFO "parse_timestamp(): timestamp parsed from request header = %s\n",timestamp);
+	requestheader=strsep(&request_dup,delim);
+	ipaddr=strsep(&request_dup,delim);
+	timestamp=strsep(&request_dup,delim);
+	printk(KERN_INFO "parse_timestamp(): request = %s\n",request);
+	printk(KERN_INFO "parse_timestamp(): requestheader parsed = %s\n",requestheader);
+	printk(KERN_INFO "parse_timestamp(): ipaddr parsed  = %s\n",ipaddr);
+	printk(KERN_INFO "parse_timestamp(): timestamp parsed  = %s\n",timestamp);
 	return timestamp;
 }
 
@@ -144,7 +164,7 @@ void reply_to_publisher(long client_ip_l, char *response)
 	sin.sin_family=AF_INET;
 	/*in4_pton(hostip, strlen(hostip), &sin.sin_addr.s_addr, '\0',NULL);*/
 	sin.sin_addr.s_addr=client_ip_l;
-        sin.sin_port=htons(10000);
+        sin.sin_port=htons(60000);
 
 	iov.iov_base=buf;
 	iov.iov_len=sizeof(buf);	
