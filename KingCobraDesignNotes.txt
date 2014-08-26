@@ -191,3 +191,7 @@ Commits as on 29 April 2014
 ------------------------------------------
 Intial commits for disk persistence of KingCobra request-reply queue messages have been done with addition of new boolean flag kingcobra_disk_persistence. VFS calls are used to open and write to the queue.
 
+------------------------------------------
+Commits as on 26 August 2014
+------------------------------------------
+KingCobra driver has been ported to 3.15.5 kernel and bugs related to a kernel_recvmsg() crash, timestamp  parsing etc., have been fixed. The random crashes were most likely due to incorrect parameters to filp_open() of disk persistence file and filesystem being mounted as read-only.
