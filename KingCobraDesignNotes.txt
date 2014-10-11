@@ -1,3 +1,4 @@
+------------------------------------------------------------------------------------------
 KingCobra - A Research Software for Distributed Request Service on Cloud with Arbiters
 
 This program is free software: you can redistribute it and/or modify
@@ -18,7 +19,9 @@ Copyright (C):
 Srinivasan Kannan (alias) Ka.Shrinivaasan (alias) Shrinivas Kannan
 Independent Open Source Developer, Researcher and Consultant
 Ph: 9789346927, 9003082186, 9791165980
-Open Source Products Profile(Krishna iResearch): http://sourceforge.net/users/ka_shrinivaasan, https://www.ohloh.net/accounts/ka_shrinivaasan
+Open Source Products Profile(Krishna iResearch): 
+http://sourceforge.net/users/ka_shrinivaasan, 
+https://www.openhub.net/accounts/ka_shrinivaasan
 Personal website(research): https://sites.google.com/site/kuja27/
 emails: ka.shrinivaasan@gmail.com, shrinivas.kannan@gmail.com, kashrinivaasan@live.com
 --------------------------------------------------------------------------------------------------
@@ -28,6 +31,8 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 --------------------------------------------------------------------------
 
 [This is a major research oriented extension of iCloud(AsFer+USBmd+VIRGO) and COBRA project (done by the author in his BE (1995-1999) along with few other esteemed classmates. http://sourceforge.net/projects/acadpdrafts/files/Excerpts_Of_PSG_BE_FinalProject_COBRA_done_in_1999.pdf/download.)]
+
+[KingCobra though a misnomer is expanded as ClOud With ARBiters MimicKING containing the anagram] 
 
 1. (THEORY) There is a cloud of nodes which execute a set of services from randomly created clients. 
 
@@ -59,11 +64,11 @@ Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 
 15. (THEORY) As "corruption" is more conspicuous with monetary element, if above services are "charged" with a logical currency (e.g. bitcoin), then corruption in cloud is defineable approximately as (but not limited to)- "Undue favour or harm meted out to a client not commensurate with the charge for the service (or) unreasonable extra logical currency demanded to execute the service of same quality (or) deliberate obstruction of justice to a client with malevolent and unholy collusion with other cloud nodes with feigned CAP". 
 
-16. (THEORY) Identifying criminal nodes as in (15) above seems to be beyond the ambit of CAP. Thus CAP with Integrity further places a theoretical limit on "pure" cloud. If Integrity is viewed as a Byzantine problem with faulty or corrupt processes in a distributed system, and if resilience factor is rf (expected number of faulty nodes), then most algorithms can ensure a "working" cloud only if resilience is ~30% or less (3*rf+1) of the total number of cloud nodes. Probably this could apply to Integrity also that places a limit of 30% on "corrupt nodes" for the Cloud to work with sanity.
+16. (THEORY) Identifying criminal nodes as in (15) above seems to be beyond the ambit of CAP. Thus CAP with Integrity further places a theoretical limit on "pure" cloud. If Integrity is viewed as a Byzantine problem with faulty or corrupt processes in a distributed system, and if resilience factor is rf (expected number of faulty nodes), then most algorithms can ensure a "working" cloud only if resilience is ~30% or less (3*rf+1) of the total number of cloud nodes. Probably this could apply to Integrity also that places a limit of 30% on "corrupt nodes" for the Cloud to work with sanity. Translating this to a Governance problem, a corruption-free administration is achievable with a maximum limit of 30% "corrupt" elements. 
 
 17. (THEORY) Analytics on the Problem reports sent to the cloud queue give a pattern of corrupt nodes. Intrinsic Merit ranking with Citation graph maxflow considering cloud as a flow network where a node positively or negatively cites or "opines" about a node, as mentioned in http://arxiv.org/abs/1006.4458 (author's Master's thesis) and http://www.nist.gov/tac/publications/2010/participant.papers/CMI_IIT.proceedings.pdf(published by the author during PhD) give a p2p ranking of cloud nodes that can be used for analysis though may not be reliable fully. 
 
-18. (THEORY) Policing the cloud nodes with arbiters - This seems to be limited by CAP theorem and Integrity as above. 
+18. (THEORY) Policing the cloud nodes with arbiters - This seems to be limited by CAP theorem and Integrity as above. Also this is reducible to perfect inference problem in http://sourceforge.net/p/asfer/code/HEAD/tree/AstroInferDesign.txt and drafts in https://sites.google.com/site/kuja27/
 
 19. (THEORY) Brooks-Iyengar algorithm for sensors in all cloud nodes is an improved Byazantine Fault Tolerant algorithm.
 
