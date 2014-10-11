@@ -170,6 +170,10 @@ When a suspect node is analyzed when a complaint problem is filed on it, (1) it 
 -------------------------------------------
 Transactions happening in a cloud are edges between the nodes involved (buyer and seller). Thus it creates a huge directed graph. Flow of money in this graph can be modelled as Flow network. Minimum Cut of this graph shows crucial nodes in the graph which play vital role in cloud economy.
 
+35. (THEORY) Cycles and components in above Money Flow Graph:
+--------------------------------------------------------------
+Above graph of money transactions could be cyclic which implies a supply chain. Strongly connected components of this graph are most related nodes that are in same industry. 
+
 -----------------------------------------------
 Commits as on 1 March 2014
 -----------------------------------------------
