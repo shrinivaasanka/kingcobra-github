@@ -164,7 +164,7 @@ Reaper thread in each cloud node harvests the zero refcounted allocations and in
 
 33. (THEORY) Cloud Policing With Arbiters - Revisited:
 ------------------------------------------------------
-When a suspect node is analyzed when a complaint problem is filed on it, (1) it is of foremost importance on how flawless is the arbiter who investigates on that and is there a perfect way to choose a perfect arbiter. In the absence of the previous credibility of entire cloud judiciary is blown to smithereens and falls apart. (2) Assuming a perfect arbiter which is questionable, next thing is to analyze the credibility of the node who sulked. This is nothing but the Citation problem in http://arxiv.org/abs/1106.4102 and http://www.nist.gov/tac/publications/2010/participant.papers/CMI_IIT.proceedings.pdf where a node can positively or negatively cite another node which is "Societal Norm" which can be faulted and citations/opinions could be concocted with malafide intent(perjury). This is rather a generalization of PageRank algorithm with negative citations. Thus Perfect Cloud Arbitration could be an unsolvable problem. (3) Even if both arbiter and complainant are perfect which is again questionable, there are still loopholes - lack of evidences or implicated witnesses might portray a negative impression of a positive node. Thus there are 3 tiers of weakenings in cloud arbitration and there could be more. P(Good) series in https://sites.google.com/site/kuja27/ precisely addresses this problem.
+When a suspect node is analyzed when a complaint problem is filed on it, (1) it is of foremost importance on how flawless is the arbiter who investigates on that and is there a perfect way to choose a perfect arbiter. In the absence of the previous credibility of entire cloud judiciary is blown to smithereens and falls apart. (2) Assuming a perfect arbiter which is questionable, next thing is to analyze the credibility of the node who sulked. This is nothing but the Citation problem in http://arxiv.org/abs/1106.4102 and http://www.nist.gov/tac/publications/2010/participant.papers/CMI_IIT.proceedings.pdf where a node can positively or negatively cite another node a "Societal Norm" which can be faulted and citations/opinions could be concocted with malafide intent(perjury). This is rather a generalization of PageRank algorithm with negative citations. Thus Perfect Cloud Arbitration could be an unsolvable problem. (3) Even if both arbiter and complainant are perfect which is again questionable, there are still loopholes - lack of evidences or implicated witnesses might portray a negative impression of a positive node. Thus there are 3 tiers of weakenings in cloud arbitration and there could be more. P(Good) series in https://sites.google.com/site/kuja27/ precisely addresses this problem.
 
 34. (THEORY) MAC Money Flow as MaxFlow problem:
 -------------------------------------------
@@ -176,7 +176,11 @@ Above graph of money transactions could be cyclic which implies a supply chain. 
 
 36. (THEORY) STOCK TRADING:
 ---------------------------
-One of the component in above MAC Money Flow Graph of cloud could be a virtual Stock Exchange. Based on the transactions in the graph, index of the exchange varies. 
+One of the component in above MAC Money Flow Graph of cloud could be a virtual Stock Exchange. Based on the financial and securities transactions of constituent organizations in the graph, index of the exchange varies.  
+
+37. (THEORY) Analysis of Poverty and Alleviation through above money flow graph:
+--------------------------------------------------------------------------------
+Weights of the edges of money flow graph are the denominations of the transaction. Thus high value edges and low value edges divide the Graph logically into Rich and Poor strata. Equitable graph is the one which does not have too much of value difference between Rich and Poor sets of edges - a utopian to achieve. Mathematically, it is an optimization LP problem that seeks to minimize sum(RichEdges)-sum(PoorEdges). This requires money flow to be programmed to find a feasible solution to this LP.
 
 -----------------------------------------------
 Commits as on 1 March 2014
