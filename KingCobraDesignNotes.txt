@@ -168,7 +168,7 @@ When a suspect node is analyzed when a complaint problem is filed on it, (1) it 
 
 34. (THEORY) MAC Money Flow as MaxFlow problem:
 -------------------------------------------
-Transactions happening in a cloud are edges between the nodes involved (buyer and seller). Thus it creates a huge directed graph. Flow of money in this graph can be modelled as Flow network. Minimum Cut of this graph shows crucial nodes in the graph which play vital role in cloud economy removal of which paralyzes the cloud (could be Central bank and other financial institutions).
+Transactions happening in a cloud are edges between the nodes involved (buyer and seller). Thus it creates a huge directed graph. Flow of money in this graph can be modelled as Flow network. Minimum Cut of this graph shows crucial nodes in the graph which play vital role in cloud economy removal of which paralyzes the cloud (could be Central bank and other financial institutions). This graph has bidirectional edges where one direction is for money and the opposite direction is for Goods and Services.
 
 35. (THEORY) Cycles and components in above MAC Money Flow Graph:
 --------------------------------------------------------------
@@ -181,6 +181,10 @@ One of the component in above MAC Money Flow Graph of cloud could be a virtual S
 37. (THEORY) Analysis of Poverty and Alleviation through above money flow graph:
 --------------------------------------------------------------------------------
 Weights of the edges of money flow graph are the denominations of the transaction. Thus high value edges and low value edges divide the Graph logically into Rich and Poor strata. Equitable graph is the one which does not have too much of value difference between Rich and Poor sets of edges - a utopian to achieve. Mathematically, it is an optimization LP problem that seeks to minimize sum(RichEdges)-sum(PoorEdges). This requires money flow to be programmed to find a feasible solution to this LP.
+
+38.Demand and Supply and Value() function:
+------------------------------------------
+Alternative to the recursive definition of value() function above can be done through Demand and Supply - more the demand and less the supply, price increases and vice-versa. This is quite subjective compared to absolute recursive definition above. 
 
 -----------------------------------------------
 Commits as on 1 March 2014
