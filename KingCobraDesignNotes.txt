@@ -182,9 +182,9 @@ One of the component in above MAC Money Flow Graph of cloud could be a virtual S
 --------------------------------------------------------------------------------
 Weights of the edges of money flow graph are the denominations of the transaction. Thus high value edges and low value edges divide the Graph logically into Rich and Poor strata. Equitable graph is the one which does not have too much of value difference between Rich and Poor sets of edges - a utopian to achieve. Mathematically, it is an optimization LP problem that seeks to minimize sum(RichEdges)-sum(PoorEdges). This requires money flow to be programmed to find a feasible solution to this LP.
 
-38.Demand and Supply and Value() function:
+38.(THEORY) Demand and Supply and Value() function:
 ------------------------------------------
-Alternative to the recursive definition of value() function above can be done through Demand and Supply - more the demand and less the supply, price increases and vice-versa. This is quite subjective compared to absolute recursive definition above. 
+Alternative to the recursive definition of value() function above can be done through Demand and Supply - more the demand and less the supply, price increases and vice-versa. This is quite subjective compared to absolute recursive definition above. To simulate demand and supply, the weights of the money edges in the bidirectional graph change and fluctuate dynamically over time for unchanging weights of the Goods and Services edges. This makes Money and G&S Flow graph a Dynamic Graph with edge weight updated operations.
 
 -----------------------------------------------
 Commits as on 1 March 2014
@@ -230,3 +230,7 @@ Intial commits for disk persistence of KingCobra request-reply queue messages ha
 Commits as on 26 August 2014
 ------------------------------------------
 KingCobra driver has been ported to 3.15.5 kernel and bugs related to a kernel_recvmsg() crash, timestamp  parsing etc., have been fixed. The random crashes were most likely due to incorrect parameters to filp_open() of disk persistence file and filesystem being mounted as read-only.
+
+---------------------------------------------------
+Version 14.9.9 release tagged on 9 September 2014
+--------------------------------------------------
