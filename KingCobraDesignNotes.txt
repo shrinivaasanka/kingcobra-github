@@ -184,8 +184,12 @@ Weights of the edges of money flow graph are the denominations of the transactio
 
 38.(THEORY) Demand and Supply and Value() function:
 ------------------------------------------
-Alternative to the recursive definition of value() function above can be done through Demand and Supply - more the demand and less the supply, price increases and vice-versa. This is quite subjective compared to absolute recursive definition above. To simulate demand and supply, the weights of the money edges in the bidirectional graph change and fluctuate dynamically over time for unchanging weights of the Goods and Services edges. This makes Money and G&S Flow graph a Dynamic Graph with edge weight updated operations.
+Alternative to the recursive definition of value() function above can be done through Demand and Supply - more the demand and less the supply, price increases and vice-versa. This is quite subjective compared to absolute recursive definition above. To simulate demand and supply, the weights of the money edges in the bidirectional graph change and fluctuate dynamically over time for unchanging weights of the Goods and Services edges. This makes Money and G&S Flow graph a Dynamic Graph with edge weight update primitive.
 
+39.(THEORY) Hidden or Colored Money:
+------------------------------------
+In an ideal Cloud with only MAC currencies, colored money can co-exist if (not limited to) some money trails are missing, due to "cloud corruption", systemic failure, hardware and network issues etc.,. Probably this is the direct consequence of CAP theorem and can be conjectured to be undecidable. 
+ 
 -----------------------------------------------
 Commits as on 1 March 2014
 -----------------------------------------------
