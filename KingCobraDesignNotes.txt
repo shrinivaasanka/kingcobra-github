@@ -168,7 +168,7 @@ When a suspect node is analyzed when a complaint problem is filed on it, (1) it 
 
 34. (THEORY) MAC Money Flow as MaxFlow problem:
 -------------------------------------------
-Transactions happening in a cloud are edges between the nodes involved (buyer and seller). Thus it creates a huge directed graph. Flow of money in this graph can be modelled as Flow network. Minimum Cut of this graph shows crucial nodes in the graph which play vital role in cloud economy removal of which paralyzes the cloud (could be Central bank and other financial institutions). This graph has bidirectional edges where one direction is for money and the opposite direction is for Goods and Services. In the Flow network sum of flows is zero. But in the Money Flow Network each node is having a cash reserve ratio (CRR) due to commercial transactions which is confidential and privy to that node only  and thus sum of flows can not be zero. Hub nodes in the Money Flow graph which can be obtained by getting k-core or D-core of the graph by some graph peeling algorithms are crucial nodes to the economy that contribute to Money circulation.
+Transactions happening in a cloud are edges between the nodes involved (buyer and seller). Thus it creates a huge directed graph. Flow of money in this graph can be modelled as Flow network. Minimum Cut of this graph shows crucial nodes in the graph which play vital role in cloud economy removal of which paralyzes the cloud (could be Central bank and other financial institutions). This graph has bidirectional edges where one direction is for money and the opposite direction is for Goods and Services. In the Flow network sum of flows is zero. But in the Money Flow Network each node is having a cash reserve ratio (CRR) due to commercial transactions which is confidential and privy to that node only  and thus sum of flows can not be zero. Hub nodes in the Money Flow graph which can be obtained by getting k-core or D-core of the graph by some graph peeling algorithms are crucial nodes to the economy that contribute to Money circulation. 
 
 35. (THEORY) Cycles and components in above MAC Money Flow Graph:
 --------------------------------------------------------------
@@ -180,7 +180,7 @@ One of the component in above MAC Money Flow Graph of cloud could be a virtual S
 
 37. (THEORY) Analysis of Poverty and Alleviation through above money flow graph:
 --------------------------------------------------------------------------------
-Weights of the edges of money flow graph are the denominations of the transaction. Thus high value edges and low value edges divide the Graph logically into Rich and Poor strata. Equitable graph is the one which does not have too much of value difference between Rich and Poor sets of edges - a utopian to achieve. Mathematically, it is an optimization LP problem that seeks to minimize sum(RichEdges)-sum(PoorEdges). This requires money flow to be programmed to find a feasible solution to this LP.
+Weights of the edges of money flow graph are the denominations of the transaction. Thus high value edges and low value edges divide the Graph logically into Rich and Poor strata. Equitable graph is the one which does not have too much of value difference between Rich and Poor sets of edges - a utopian to achieve. Mathematically, it is an optimization LP problem that seeks to minimize sum(RichEdges)-sum(PoorEdges). This requires money flow to be programmed to find a feasible solution to this LP. Due to CRR above Vertices also can be Rich and Poor in addition to Rich Edges and Poor Edges. 
 
 38.(THEORY) Demand and Supply and Value() function:
 ------------------------------------------
@@ -188,7 +188,7 @@ Alternative to the recursive definition of value() function above can be done th
 
 39.(THEORY) Hidden or Colored Money:
 ------------------------------------
-In an ideal Cloud with only MAC currencies, colored money can co-exist if (not limited to) some money trails are missing, due to "cloud corruption", systemic failure, hardware and network issues etc.,. Probably this is the direct consequence of CAP theorem and can be conjectured to be undecidable. 
+In an ideal Cloud with only MAC currencies, colored money can co-exist if (not limited to) some money trails are missing, due to "cloud corruption", systemic failure, hardware and network issues etc.,. Probably this is the direct consequence of CAP theorem and can be conjectured to be undecidable. Hidden money is tosome extent dependent on quantity of net flow (if non-zero) and how much of this net flow is contributed by Rich vertices and Edges. 
  
 -----------------------------------------------
 Commits as on 1 March 2014
