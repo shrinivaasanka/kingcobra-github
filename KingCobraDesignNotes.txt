@@ -180,7 +180,7 @@ One of the component in above MAC Money Flow Graph of cloud could be a virtual S
 
 37. (THEORY) Analysis of Poverty and Alleviation through above money flow graph:
 --------------------------------------------------------------------------------
-Weights of the edges of money flow graph are the denominations of the transaction. Thus high value edges and low value edges divide the Graph logically into Rich and Poor strata. Equitable graph is the one which does not have too much of value difference between Rich and Poor sets of edges - a utopian to achieve. Mathematically, it is an optimization LP problem that seeks to minimize sum(RichEdges)-sum(PoorEdges). This requires money flow to be programmed to find a feasible solution to this LP. Due to CRR above Vertices also can be Rich and Poor in addition to Rich Edges and Poor Edges. 
+Weights of the edges of money flow graph are the denominations of the transaction. Thus high value edges and low value edges divide the Graph logically into Rich and Poor strata. Equitable graph is the one which does not have too much of value difference between Rich and Poor sets of edges - a utopian to achieve. Mathematically, it is an optimization LP problem that seeks to minimize sum(RichEdges)-sum(PoorEdges) or Sum(RichVertices) - sum(PoorVertices) - without harming either - to be precise. This requires money flow to be programmed to find a feasible solution to this LP subject to constraints like work-pay parity etc.,(there could be more variables and constraints to this LP) . Due to CRR above Vertices also can be Rich and Poor in addition to Rich Edges and Poor Edges. 
 
 38.(THEORY) Demand and Supply and Value() function:
 ------------------------------------------
