@@ -55,7 +55,10 @@ kingcobra_kernelspace_init(void)
 	if(kingcobra_disk_persistence==1)
 	{
 		printk(KERN_INFO "kingcobra_kernelspace_init(): Initializing disk persistence file for KingCobra\n");
-        	request_reply_queue=filp_open("/tmp/REQUEST_REPLY.queue", O_RDWR | O_CREAT | O_APPEND | O_LARGEFILE , 0755);
+		/*
+		request_reply_queue=filp_open("/tmp/REQUEST_REPLY.queue", O_RDWR | O_CREAT | O_APPEND | O_LARGEFILE , 0755);
+		*/
+        	request_reply_queue=filp_open("/var/log/kingcobra/REQUEST_REPLY.queue", O_APPEND , 0777);
 		if(IS_ERR(request_reply_queue))
 		{
 			filp_ret=PTR_ERR(request_reply_queue);	
@@ -145,7 +148,11 @@ void reply_to_publisher(long client_ip_l, char *response)
 	
 	int nr;
 	struct kvec iov;
+#ifdef LINUX_KERNEL_4_x_x
+	struct user_msghdr msg;
+#else
 	struct msghdr msg;
+#endif
 	int error;
 	struct socket *sock;
 	struct sockaddr_in sin;
