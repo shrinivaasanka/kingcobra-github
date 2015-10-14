@@ -255,3 +255,7 @@ KingCobra + VIRGO Queuing port of Linux Kernel 4.1.5 :
  - kern.log with logs for telnet request sent to VIRGO queue driver, queued in kernel work queue and handler invocation for the
 KingCobra service request kernel function for the popped request; disk persisted /var/log/kingcobra/REQUEST_REPLY.queue
 
+--------------------------------------------
+Commits as on 14 October 2015
+--------------------------------------------
+AsFer Cloud Perfect Forwarding binaries are invoked through call_usermodehelper() in VIRGO queue. KingCobra commands has been updated with a clause for cloud perfect forwarding.
