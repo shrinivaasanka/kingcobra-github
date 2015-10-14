@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 
        int s=0;
 
-       handle = dlopen("/home/kashrinivaasan/linux-3.7.8/drivers/virgo/queuing/libkingcobra_commands.so", RTLD_LAZY);
+       handle = dlopen("/media/shrinivaasanka/0fc4d8a2-1c74-42b8-8099-9ef78d8c8ea2/home/kashrinivaasan/linux-4.1.5/drivers/kcobra/libkingcobra_commands.so", RTLD_LAZY);
        if (!handle) {
              fprintf(stderr, "%s\n", dlerror());
              exit(EXIT_FAILURE);
@@ -70,7 +70,7 @@ int main(int argc, char **argv)
                fprintf(stderr, "%s\n", error);
                exit(EXIT_FAILURE);
        }
-       printf("KingCobra userspace library: spawning userspace thread for KingCobra function pointer: %x\n",kingcobra_function);
+       printf("KingCobra userspace library: spawning userspace thread for KingCobra function pointer: %p\n",kingcobra_function);
        int args=1000;
        s=pthread_create(&tid, NULL, kingcobra_function, &args); 
        pthread_join(tid, &x);
