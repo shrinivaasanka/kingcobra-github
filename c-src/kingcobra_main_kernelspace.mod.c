@@ -36,6 +36,7 @@ __attribute__((section("__versions"))) = {
 	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
 	{ 0x86c90730, __VMLINUX_SYMBOL_STR(kmem_cache_alloc_trace) },
 	{ 0x2fa31741, __VMLINUX_SYMBOL_STR(kernel_recvmsg) },
+	{ 0x8e123c5c, __VMLINUX_SYMBOL_STR(fd_install) },
 	{ 0xe3dce9d9, __VMLINUX_SYMBOL_STR(vfs_write) },
 	{ 0xe914e41e, __VMLINUX_SYMBOL_STR(strcpy) },
 	{ 0x1085e609, __VMLINUX_SYMBOL_STR(filp_open) },
