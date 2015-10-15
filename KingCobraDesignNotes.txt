@@ -259,3 +259,11 @@ KingCobra service request kernel function for the popped request; disk persisted
 Commits as on 14 October 2015
 --------------------------------------------
 AsFer Cloud Perfect Forwarding binaries are invoked through call_usermodehelper() in VIRGO queue. KingCobra commands has been updated with a clause for cloud perfect forwarding.
+
+--------------------------------------------
+Commits as on 15 October 2015
+--------------------------------------------
+- Updated KingCobra module binaries and build generated sources
+- kingcobra_usermode_log.txt with "not found" error from output redirection (kingcobra_commands.c). This error is due to need for absolute path. But there are "alloc_fd: slot 1 not NULL!" after fd_install() is uncommented in virgo_queue.h call_usermodehelper() code. The kern.log with these errors has been added to testlogs
+- kingcobra_commands.c has been changed to invoke absolute path executable. With uncommenting of fd_install and set_ds code in virgo_queue the return code of call_usermodehelper() is 0 indicating successful invocation
+
