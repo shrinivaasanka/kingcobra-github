@@ -282,3 +282,9 @@ Commits as on 15 October 2015
 - kingcobra_usermode_log.txt with "not found" error from output redirection (kingcobra_commands.c). This error is due to need for absolute path. But there are "alloc_fd: slot 1 not NULL!" after fd_install() is uncommented in virgo_queue.h call_usermodehelper() code. The kern.log with these errors has been added to testlogs
 - kingcobra_commands.c has been changed to invoke absolute path executable. With uncommenting of fd_install and set_ds code in virgo_queue the return code of call_usermodehelper() is 0 indicating successful invocation
 
+---------------------------------------------------------------------------
+Commits as on 10 January 2016
+---------------------------------------------------------------------------
+NeuronRain KingCobra enterprise version 2016.1.10 released.
+
+
