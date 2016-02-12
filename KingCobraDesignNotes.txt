@@ -287,4 +287,28 @@ Commits as on 10 January 2016
 ---------------------------------------------------------------------------
 NeuronRain KingCobra enterprise version 2016.1.10 released.
 
+--------------------------------------------------------------------------------------------------
+NEURONRAIN VIRGO Commits for virgo_clone()/telnet -> VIRGO cpupooling -> VIRGO Queue -> KingCobra
+- as on 12 February 2016
+--------------------------------------------------------------------------------------------------
+VIRGO commit:
+https://github.com/shrinivaasanka/virgo-linux-github-code/commit/72d9cfc90855719542cdb62ce40b798cc7431b3d
+
+Commit comments:
+-----------------------------------------------------------------------------------------
+Commits for Telnet/System Call Interface to VIRGO CPUPooling -> VIRGO Queue -> KingCobra
+-----------------------------------------------------------------------------------------
+*) This was commented earlier for the past few years due to a serious kernel panic in previous kernel versions - <= 3.15.5
+*) In 4.1.5 a deadlock between VIRGO CPUPooling and VIRGO queue driver init was causing following error in "use_as_kingcobra_service" clause :
+  - "gave up waiting for virgo_queue init, unknown symbol push_request()"
+*) To address this a new boolean flag to selectively enable and disable VIRGO Queue kernel service mode "virgo_queue_reactor_service_mode" has been added.
+*) With this flag VIRGO Queue is both a kernel service driver and a standalone exporter of function symbols - push_request/pop_request
+*) Incoming request data from telnet/virgo_clone() system call into cpupooling kernel service reactor pattern (virgo cpupooling listener loop) is treated as generic string and handed over to VIRGO queue and KingCobra which publishes it.
+*) This resolves a long standing deadlock above between VIRGO cpupooling "use_as_kingcobra_service" clause and VIRGO queue init.
+*) This makes virgo_clone() systemcall/telnet both synchronous and asynchronous - requests from telnet client/virgo_clone() system call can be
+either synchronous RPC functions executed on a remote cloud node in kernelspace (or) an asynchronous invocation through "use_as_kingcobra_service"
+ clause path to VIRGO Queue driver which enqueues the data in kernel workqueue and subsequently popped by KingCobra.
+*) Above saves an additional code implementation for virgo_queue syscall paths - virgo_clone() handles, based on config selected, incoming
+data passed to it either as a remote procedure call or as a data that is pushed to VIRGO Queue/KingCobra pub-sub kernelspace
+*) Kernel Logs and REQUEST_REPLY.queue for above commits have been added to kingcobra c-src/testlogs/
 
