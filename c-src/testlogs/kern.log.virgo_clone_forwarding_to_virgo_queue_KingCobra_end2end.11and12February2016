@@ -1,0 +1,122 @@
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124285] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124288] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124290] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124293] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124295] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124297] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124300] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124302] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124304] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124307] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124309] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124311] end print_buffer():
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124719] usb_fill_bulk_urb(): urb->transfer_buffer = USBCs^A
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124722] begin print_buffer():
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124724] print_buffer() byte: 55
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124727] print_buffer() byte: 53
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124729] print_buffer() byte: 42
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124731] print_buffer() byte: 43
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124734] print_buffer() byte: 73
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124736] print_buffer() byte: 1
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124738] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124741] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124743] print_buffer() byte: 12
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124746] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124748] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124750] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124753] print_buffer() byte: ffffff80
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.124755] end print_buffer():
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125721] usb_fill_bulk_urb(): urb->transfer_buffer = USBCs^A
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125724] begin print_buffer():
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125726] print_buffer() byte: 55
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125729] print_buffer() byte: 53
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125731] print_buffer() byte: 42
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125734] print_buffer() byte: 43
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125736] print_buffer() byte: 73
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125738] print_buffer() byte: 1
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125741] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125743] print_buffer() byte: 0
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125746] print_buffer() byte: 12
+Feb 11 22:10:36 shrinivaasanka-Inspiron-1545 kernel: [  220.125748] print_buffer() byte: 0
+------------------------
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.305970] tokenize_list_of_ip_addrs(): 127.0.0.1
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.305970]
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.305974] tokenize_list_of_ip_addrs(): virgocpupooling_node_ip_addrs_in_cloud[1] = 127.0.0.1
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.305974]
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.305989] virgocloudexec_init(): sock_create() returns error code: 0
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.305996] virgocloudexec_init(): kernel_bind() returns error code: 0
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.306008] virgocloudexec_init(): kernel_listen() returns error code: 0
+Feb 11 22:12:18 shrinivaasanka-Inspiron-1545 kernel: [  322.306010] virgo_cloudexec_service(): virgo_ops.virgo_create()
+Feb 11 22:12:44 shrinivaasanka-Inspiron-1545 kernel: [  348.439096] virgocloudexec_create(): kernel_accept() returns error code: 0
+Feb 11 22:12:44 shrinivaasanka-Inspiron-1545 kernel: [  348.439104] virgocloudexec_create(): kernel_accept() clientsock: 4096760192
+Feb 11 22:12:44 shrinivaasanka-Inspiron-1545 kernel: [  348.439107] virgo_cloudexec_service(): virgo client thread per request
+Feb 11 22:12:44 shrinivaasanka-Inspiron-1545 kernel: [  348.439178] virgo_cloudexec_service(): virgo_ops.virgo_create()
+Feb 11 22:12:44 shrinivaasanka-Inspiron-1545 kernel: [  348.439259] virgo_client_thread(): virgo_ops.virgo_recvfrom()
+Feb 11 22:12:44 shrinivaasanka-Inspiron-1545 kernel: [  348.439263] virgocloudexec_recvfrom(): before kernel_recvmsg()
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435809] virgocloudexec_recvfrom(): kernel_recvmsg() returns len: 33
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435819] virgocloudexec_cpupool_recvfrom(): client_ip_str = 10072c1
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435823] virgocloudexec_cpupool_recvfrom(): client_ip_str with # appended = 10072c1#
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435829] generate_logical_timestamp(): machine_timestamp=1, generating timestamp for this request as 1455208976:637751115#
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435834] virgocloudexec_cpupool_recvfrom(): use_as_kingcobra_service=1, mempoolFunction with prepended request header and client ip=REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435838] virgocloudexec_recvfrom(): kernel_recvmsg() returns in recv buffer: KingCobraRequest_11February2016^M
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435838]
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435842] print_buffer():
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435844] Ki
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435848] ng
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435852]
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435855] virgocloudexec_recvfrom(): kernel_recvmsg() le32 to cpu KingCobraRequest_11February2016^M
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435855]
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435859] virgocloudexec_recvfrom(): cloneFunction : REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435862] clone_func(): creating kernel thread and waking up, parameterIsExecutable=2
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435865] clone_func(): VIRGO cloudexec is used as KingCobra service, invoking push_request() in kernelspace for data: REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435873] push_request(): use_workqueue=1, enqueueing req in the kernel workqueue which will invoke handler, req->data = REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016, vwqreq->work=edf24d04, vwqreq->data = REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016
+
+------------------------------------
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435886] virgocloudexec_sendto(): before kernel_sendmsg() for send buffer: virgo_cloudexec_sendto(): cloudclonethread executed for clone_func(), sending message to virgo_clone() remote syscall client
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435886]
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435917] virgocloudexec_sendto(): kernel_sendmsg() returns ret: 500
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435921] virgocloudexec_sendto(): Shut down Kernel Side Client Socket with SOCK_WAKE_URG after sendmsg
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435947] virgocloudexec_sendto(): sock_release invoked on client socket
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435983] virgo_workqueue_handler(): invoked for work_struct w=edf24d04, dequeueing enqueued vwqrq->data=REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435986] virgo_workqueue_handler(): kingcobra_in_userspace=0, before invoking kingcobra_servicerequest_kernelspace()
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435990] kingcobra_servicerequest_kernelspace(): KingCobra service request received from kernel KingCobra workqueue: REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435994] kingcobra_servicerequest_kernelspace(): disk persistence enabled, writing incoming request to KingCobra disk file:REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016 $$
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.435994]
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436084] parse_ip_address(): request_dup = REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436094] parse_ip_address(): request_header= REQUEST
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436104] parse_ip_address(): token = 10072c1
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436107] parse_ip_address(): ll2=16806593
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436112] parse_timestamp(): request = REQUEST#10072c1#1455208976:637751115#KingCobraRequest_11February2016 $$
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436112]
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436116] parse_timestamp(): requestheader parsed = REQUEST
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436119] parse_timestamp(): ipaddr parsed  = 10072c1
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436121] parse_timestamp(): timestamp parsed  = 1455208976:637751115
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436133] reply_to_publisher() : created client kernel socket
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436139] reply_to_publisher() : connected kernel client to virgo cloudexec kernel service
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436139]
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436143] reply_to_publisher() : sent message: REPLY#10072c1#1455208976:637751115 :--- from kingcobra_servicerequest_kernelspace() to client
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436147] reply_to_publisher() : received message: REPLY#10072c1#1455208976:637751115 :--- from kingcobra_servicerequest_kernelspace() to client
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436151] reply_to_publisher() : le32_to_cpus(buf): REPLY#10072c1#1455208976:637751115 :--- from kingcobra_servicerequest_kernelspace() to client
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436158] reply_to_publisher() : reply_to_publisher() client socket_release() invoked
+Feb 11 22:12:56 shrinivaasanka-Inspiron-1545 kernel: [  360.436161] virgo_workqueue_handler(): after invoking kingcobra_servicerequest_kernelspace()
+
+-------------------------------
+Feb 11 22:13:04 shrinivaasanka-Inspiron-1545 kernel: [  368.123283] perf interrupt took too long (2508 > 2500), lowering kernel.perf_event_max_sample_rate to 50000
+Feb 11 22:15:49 shrinivaasanka-Inspiron-1545 kernel: [  533.468147] EXT4-fs (sda5): error count since last fsck: 642
+Feb 11 22:15:49 shrinivaasanka-Inspiron-1545 kernel: [  533.468176] EXT4-fs (sda5): initial error at time 1441548150: __ext4_get_inode_loc:3769: inode 304305: block 1212493
+Feb 11 22:15:49 shrinivaasanka-Inspiron-1545 kernel: [  533.468186] EXT4-fs (sda5): last error at time 1449673607: ext4_read_inode_bitmap:184: inode 304316: block 1212493
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.281849] virgocloudexec_create(): kernel_accept() returns error code: -512
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.281856] virgocloudexec_create(): kernel_accept() clientsock: 0
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.281859] virgo_cloudexec_service(): virgo client thread per request
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.316259] virgo_cloudexec_service(): virgo_ops.virgo_create()
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.316271] virgo_client_thread(): virgo_ops.virgo_recvfrom()
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.316274] virgo_client_thread(): virgo_ops.virgo_sendto()
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353787] virgocloudexec_create(): kernel_accept() returns error code: -512
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353793] virgocloudexec_create(): kernel_accept() clientsock: 0
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353796] virgo_cloudexec_service(): virgo client thread per request
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353861] BUG: unable to handle kernel paging request at fffffffc
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353869] IP: [<c108de9b>] wake_up_process+0xb/0x40
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353882] *pdpt = 0000000001bc7001 *pde = 0000000001bc8063 *pte = 0000000000000000
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353890] Oops: 0000 [#1] SMP
+Feb 11 22:18:10 shrinivaasanka-Inspiron-1545 kernel: [  674.353896] Modules linked in: virgo_cloudexec(OE+) virgo_cloud_test_kernelspace(OE) virgo_queue(OE) kingcobra_main_kernelspace(OE) cfg80211 rfcomm bnep binfmt_misc btusb btbcm btintel bluetooth gpio_ich dell_wmi sparse_keymap dell_laptop dcdbas i8k coretemp joydev serio_raw uvcvideo videobuf2_vmalloc videobuf2_memops videobuf2_core v4l2_common videodev lpc_ich media snd_hda_codec_idt shpchp snd_hda_codec_generic snd_hda_intel snd_hda_controller snd_hda_codec i915 snd_hda_core snd_hwdep snd_pcm snd_seq_midi snd_seq_midi_event snd_rawmidi drm_kms_helper snd_seq snd_seq_device drm snd_timer snd wmi video mac_hid soundcore i2c_algo_bit ip6t_REJECT nf_reject_ipv6 nf_log_ipv6 xt_hl ip6t_rt nf_conntrack_ipv6 nf_defrag_ipv6 ipt_REJECT nf_reject_ipv4 nf_log_ipv4 nf_log_common xt_LOG xt_limit xt_tcpudp xt_addrtype nf_conntrack_ipv4 nf_defrag_ipv4 xt_conntrack ip6table_filter ip6_tables nf_conntrack_netbios_ns nf_conntrack_broadcast nf_nat_ftp nf_nat nf_conntrack_ftp nf_conntrack iptable_filter ip_tables x_tables parport_pc ppdev lp parport autofs4 hid_generic usbhid hid psmouse sky2 ahci 
+
