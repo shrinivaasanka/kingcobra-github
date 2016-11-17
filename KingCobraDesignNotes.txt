@@ -30,7 +30,7 @@ emails: ka.shrinivaasan@gmail.com, shrinivas.kannan@gmail.com, kashrinivaasan@li
 Theoretical Interludes, Design Notes and ToDo (long term with no deadline)
 --------------------------------------------------------------------------
 
-[This is a major research oriented extension of iCloud(AsFer+USBmd+VIRGO) and COBRA project (done by the author in his BE (1995-1999) along with few other esteemed classmates. http://sourceforge.net/projects/acadpdrafts/files/Excerpts_Of_PSG_BE_FinalProject_COBRA_done_in_1999.pdf/download.)]
+[This is a major research oriented subsystem of NeuronRain and inspired by COBRA project (done by the author in his BE (1995-1999) along with few other esteemed classmates. http://sourceforge.net/projects/acadpdrafts/files/Excerpts_Of_PSG_BE_FinalProject_COBRA_done_in_1999.pdf/download.)]
 
 [KingCobra though a misnomer is expanded as ClOud With ARBiters MimicKING containing the anagram] 
 
