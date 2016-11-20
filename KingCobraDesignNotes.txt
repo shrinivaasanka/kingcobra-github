@@ -213,9 +213,10 @@ In an ideal Cloud with only MAC currencies, colored money can co-exist if (not l
 
 Total storage of money in Flow Market Graph = | Incoming money flow at Source - Incoming money flow at Sink | i.e Flow conservation is no longer obeyed.
 
-Colored Money = | Taxation rate * Incoming money flow at Source(Mint) - Total storage money * Taxation rate | = | Taxation rate * Incoming money flow at Sink|
+There is a special vertex in Money Flow Market designated as Taxation Hub which has incoming tax money flow edges from all other vertices in Flow market.Colored money is then approximately the taxed storage money estimated above minus the net flow of money received at Taxation Hub. 
 
-Colored Money = | Taxation rate * Incoming money flow at Sink(Mint)|
+Colored Money = | Total storage money * Taxation rate - Incoming Flow at Taxation Hub Node|
+Colored Money = | Incoming money flow at Source * Taxation rate - Incoming money flow at Sink * Taxation rate - Incoming Flow at Taxation Hub Node |
 
 Previous is an approximate naive zero-knowledge estimation of Colored money in Money Flow Market. This assumes that there is always a sink in Money Flow Market which is not necessarily valid unless notes are returned to mint. Satellite RFID Tracking technologies though invasive and intrusive like previous can present a rough figure of total money circulation in Source and Sink.
 
@@ -226,6 +227,7 @@ References:
 39.3 Algorithmic Game Theory - Flow Markets - [TimRoughGarden] - http://theory.stanford.edu/~tim/books.html
 39.4 RFID tagged currencies - $100 bill - http://www.businessinsider.in/New-Smart-Paper-Could-Put-An-End-To-Dark-Money/articleshow/21134569.cms
 39.5 Cons of RFID currencies - http://www.prisonplanet.com/022904rfidtagsexplode.html
+39.6 Mechanism Design and Machine Learning - https://www.cs.cmu.edu/~mblum/search/AGTML35.pdf - Design of algorithms for maximizing gain in auctions involving sellers and buyers
  
 -----------------------------------------------
 Commits as on 1 March 2014
