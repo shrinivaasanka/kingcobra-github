@@ -164,6 +164,7 @@ References:
 -----------
 28.1 Price fixing for items in Buyer-Seller-Trader networks - Trading Networks - Market Equilibrium and Walrasian Model of Price fixing - http://www.cs.cornell.edu/~eva/traders.pdf
 28.2 Algoithmic Game Theory - Market Equilibrium for Price - Equilibrium is a strategic standoff - both players can't better their own present by changing strategies e.g Buyer-Sellers are market players and equilibrium price is the one where both buyer and seller can't gain by varying it - http://www.cis.upenn.edu/~mkearns/nips02tutorial/nips.pdf. Buyer-Seller payoff matrix picturises the bargaining problem.
+28.3 Price-setting in Trading networks - Chapter 11 - https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book.pdf
 
 29. (THEORY) VALUE FOR ELECTRONIC MONEY: How is above MAC money earned - This again requires linking value to money (as money is not a value by itself and only a pointer to valuable item or resource). Thus any buyer can "earn" MAC money by something similar to a barter.
 
