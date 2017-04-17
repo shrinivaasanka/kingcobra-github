@@ -338,3 +338,11 @@ either synchronous RPC functions executed on a remote cloud node in kernelspace 
 data passed to it either as a remote procedure call or as a data that is pushed to VIRGO Queue/KingCobra pub-sub kernelspace
 *) Kernel Logs and REQUEST_REPLY.queue for above commits have been added to kingcobra c-src/testlogs/
 
+---------------------------------------------------------------------------------------------------------------
+Commits - KingCobra 64 bit and VIRGO Queue + KingCobra telnet requests - 17 April 2017
+---------------------------------------------------------------------------------------------------------------
+*) Rebuilt KingCobra 64bit kernel module
+*) telnet requests to VIRGO64 Queueing module listener driver are serviced by KingCobra servicerequest
+*) Request_Reply queue persisted for this VIRGO Queue + KingCobra routing has been committed to c-src/testlogs.
+*) kern.log for this routing has been committed in VIRGO64 queueing directory
+*) Similar to other drivers struct socket* reinterpret cast to int has been removed and has been made const in queuesvc kernel thread
