@@ -2,9 +2,7 @@
 #Makefile for VIRGO queue 
 #
 
-#ccflags-y := -I/home/kashrinivaasan/linux-3.7.8/lib -I/home/kashrinivaasan/linux-3.7.8 -I/home/kashrinivaasan/linux-3.7.8/include -DDEBUG
-ccflags-y := -w -I/media/shrinivaasanka/0fc4d8a2-1c74-4268-8099-9ef78d8c8ea22/home/kashrinivaasan/linux-4.1.5/lib -I/media/shrinivaasanka/0fc4d8a2-1c74-4268-8099-9ef78d8c8ea22/home/kashrinivaasan/linux-4.1.5/ -I/media/shrinivaasanka/0fc4d8a2-1c74-4268-8099-9ef78d8c8ea22/home/kashrinivaasan/linux-4.1.5/include -DDEBUG
+ccflags-y := -w -I/media/ka_shrinivaasan/cbddc062-a016-4828-8780-21bc64cef1e8/linux-4.10.3/lib -I-I/media/ka_shrinivaasan/cbddc062-a016-4828-8780-21bc64cef1e8/linux-4.10.3/include -I/media/ka_shrinivaasan/cbddc062-a016-4828-8780-21bc64cef1e8/linux-4.10.3/include -DDEBUG
 
-#virgo_queue_driver-y	+= virgo_queue.o
 kingcobra_main_kernelspace_driver-y	+= kingcobra_main_kernelspace.o
 obj-m               += kingcobra_main_kernelspace.o

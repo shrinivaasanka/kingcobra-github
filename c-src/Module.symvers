@@ -1,3 +1,3 @@
-0xe3fe0694	kingcobra_servicerequest_kernelspace	/media/shrinivaasanka/0fc4d8a2-1c74-42b8-8099-9ef78d8c8ea2/home/kashrinivaasan/linux-4.1.5/drivers/kcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
-0xe4de3087	kingcobra_kernelspace_init	/media/shrinivaasanka/0fc4d8a2-1c74-42b8-8099-9ef78d8c8ea2/home/kashrinivaasan/linux-4.1.5/drivers/kcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
-0x20350e7e	kingcobra_kernelspace_exit	/media/shrinivaasanka/0fc4d8a2-1c74-42b8-8099-9ef78d8c8ea2/home/kashrinivaasan/linux-4.1.5/drivers/kcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
+0xe3fe0694	kingcobra_servicerequest_kernelspace	/media/ka_shrinivaasan/cbddc062-a016-4828-8780-21bc64cef1e8/linux-4.10.3/drivers/kingcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
+0xe4de3087	kingcobra_kernelspace_init	/media/ka_shrinivaasan/cbddc062-a016-4828-8780-21bc64cef1e8/linux-4.10.3/drivers/kingcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
+0x20350e7e	kingcobra_kernelspace_exit	/media/ka_shrinivaasan/cbddc062-a016-4828-8780-21bc64cef1e8/linux-4.10.3/drivers/kingcobra/kingcobra_main_kernelspace	EXPORT_SYMBOL
