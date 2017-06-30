@@ -219,12 +219,18 @@ In an ideal Cloud with only MAC currencies, colored money can co-exist if (not l
 
 Total storage of money in Flow Market Graph = | Incoming money flow at Source - Incoming money flow at Sink | i.e Flow conservation is no longer obeyed.
 
-There is a special vertex in Money Flow Market designated as Taxation Hub which has incoming tax money flow edges from all other vertices in Flow market.Colored money is then approximately the taxed storage money estimated above minus the net flow of money received at Taxation Hub. 
+There is a special vertex in Money Flow Market designated as Direct Taxation Hub which has incoming direct tax money flow edges from all other vertices in Flow market.Colored money is then approximately the taxed storage money estimated above minus the net flow of money received at Taxation Hub.
 
-Colored Money = | Total storage money * Taxation rate - Incoming Flow at Taxation Hub Node|
-Colored Money = | Incoming money flow at Source * Taxation rate - Incoming money flow at Sink * Taxation rate - Incoming Flow at Taxation Hub Node |
+Colored Money = | Total storage money * Direct Taxation rate - Incoming Flow at Direct Taxation Hub Node|
+Colored Money = | Incoming money flow at Source * Direct Taxation rate - Incoming money flow at Sink * Direct Taxation rate - Incoming Flow at Direct Taxation Hub Node |
 
 Previous is an approximate naive zero-knowledge estimation of Colored money in Money Flow Market. This assumes that there is always a sink in Money Flow Market which is not necessarily valid unless notes are returned to mint. Satellite RFID Tracking technologies though invasive and intrusive like previous can present a rough figure of total money circulation in Source and Sink.
+
+Above estimate is for direct taxation and resultant evasion. For indirect taxes (on Goods and Services etc.,), there is no direct impact on the money component and only G&S are affected. Combining Goods,Services and Income into one (direct+indirect) taxation could have a negative effect on Colored money because incentive to hide money no longer exists. For example, if only Goods and Services consumed by high-income brackets are preferentially taxed at high percentage replacing tax on income, income is also indirectly taxed in addition to G&S. Thus there is no necessity to tax income and any advantage of such direct taxation is indirectly usurped by preferential G&S taxation. Previous zero-knowledge estimate then becomes:
+
+Colored Money = | Total Goods and Services * Taxation rate - Incoming Flow at Indirect Taxation Hub Node|
+Colored Money = | GDP^2 * Tax-to-GDP ratio - Incoming Flow at Indirect Taxation Hub Node| where GDP is assumed to be equal to Total Goods and Services.
+
 
 References:
 -----------
