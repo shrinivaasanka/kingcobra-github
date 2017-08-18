@@ -352,3 +352,23 @@ Commits - KingCobra 64 bit and VIRGO Queue + KingCobra telnet requests - 17 Apri
 *) Request_Reply queue persisted for this VIRGO Queue + KingCobra routing has been committed to c-src/testlogs.
 *) kern.log for this routing has been committed in VIRGO64 queueing directory
 *) Similar to other drivers struct socket* reinterpret cast to int has been removed and has been made const in queuesvc kernel thread
+
+--------------------------------------------------------------------------------------------------------------
+(FEATURE-DONE) Commits - CVXPY implementation for Eisenberg-Gale Convex Program - 18 August 2017
+--------------------------------------------------------------------------------------------------------------
+(*) First commits for Convex Optimized Market Equilibrium Prices
+(*) Imports CVXPY Convex Program solver
+(*) Objective function is a logistic variant of Eisenberg-Gale Convex Program i.e uses money * log(1+e^utility) instead of
+ money * log(utility) because of curvature error (log is error flagged as concave and logistic is convex per:
+ http://www.cvxpy.org/en/latest/tutorial/functions/index.html#vector-matrix-functions)
+(*) Formulates constraints and objective functions based on http://www.cs.cmu.edu/~sandholm/cs15-892F13/algorithmic-game-theory.pdf - Page 106 and Equation 5.1
+(*) But, For all installed solvers ECOS, ECOS_BB, SCS, LS solved convex program prints value as None despite all constraints and objective functions being convex. Also is_dcp() prints "not a disciplined convex program". Logs in testlogs/.
+(*) Obviously it should have worked. Therefore this is only a partial implementation commit.
+(*) This implementation uses numpy randomly initialized arrays for Money each buyer has and per-good utility(happiness) each buyer has.
+(*) Replacing money with perceived merit values translates this Market Equilibrium - Intrinsic Value versus Market Price - to Merit
+ Equilibrium - Intrinsic Merit versus Perceived Merit. This has been already described in NeuronRain AsFer Design Documents:
+        - http://sourceforge.net/p/asfer/code/HEAD/tree/asfer-docs/AstroInferDesign.txt and
+        - https://github.com/shrinivaasanka/asfer-github-code/blob/master/asfer-docs/AstroInferDesign.txt
+
+
+
