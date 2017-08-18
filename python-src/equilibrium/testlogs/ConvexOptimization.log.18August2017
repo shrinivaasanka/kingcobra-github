@@ -1,0 +1,403 @@
+[[ 15684.52587253  18301.78890133   9972.60615009   2291.33554429
+    1737.59885166   9858.12543067   8498.62320273  12690.47113252
+    5340.37917715   3975.92007275]]
+0.0 + 15684.5258725 * logistic(var0[0, 0]) + 18301.7889013 * logistic(var0[1, 0]) + 9972.60615009 * logistic(var0[2, 0])
+Curvature of Function: CONVEX
+Sign of Function: POSITIVE
+maximize 0.0 + 15684.5258725 * logistic(var0[0, 0]) + 18301.7889013 * logistic(var0[1, 0]) + 9972.60615009 * logistic(var0[2, 0])
+Per unit Goods utilities matrix:
+[[ 6.25829638  8.80864005  8.06963984  9.81627591  0.71268986  6.68537511
+   5.2031706   2.20035924  6.87763204  2.54163277]
+ [ 1.91432656  1.1941177   6.39573371  3.45782069  7.84461169  2.71724825
+   7.62835807  3.88566414  3.14630002  1.46083112]
+ [ 1.54406538  0.45014331  0.16286827  0.50398203  9.1604758   4.10207533
+   8.72106166  5.94419585  6.78721605  6.73110635]
+ [ 0.29520102  7.12880417  7.98478467  6.18411707  8.34119647  9.26540814
+   3.6005497   5.23241336  5.157133    2.5869175 ]
+ [ 0.93646157  3.12291007  4.17613789  6.42632294  0.47362858  8.17100906
+   1.8473861   4.40231512  1.58021683  8.25809626]
+ [ 5.65080054  0.63609806  5.42468616  9.83121197  6.14963766  7.16220545
+   4.66420801  3.78895777  6.63096424  1.59517434]
+ [ 5.14669435  2.22296964  8.69586366  4.74848278  1.62624187  9.78479818
+   3.61697567  9.5227715   3.22892757  7.35532446]
+ [ 9.73575442  9.54423617  6.58767742  0.50695685  6.35960982  4.36946029
+   8.90223865  7.14676514  4.49216889  2.54488707]
+ [ 2.72118621  0.41507447  9.04497748  4.90572462  4.57010004  3.44898392
+   4.04553359  4.29332958  8.99433512  5.88994236]
+ [ 3.29778302  6.2373773   3.34347155  0.74100827  7.47476836  7.26539222
+   7.07575823  2.61039998  7.49870871  2.13731251]]
+Goods and buyers matrix:
+var1
+0.0
+0.0 + 6.25829638141 * abs(var1[0, 0]) + 8.80864005165 * abs(var1[0, 1]) + 8.06963984029 * abs(var1[0, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 1.91432656266 * abs(var1[1, 0]) + 1.19411769565 * abs(var1[1, 1]) + 6.39573370692 * abs(var1[1, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 1.54406538342 * abs(var1[2, 0]) + 0.450143313256 * abs(var1[2, 1]) + 0.162868271427 * abs(var1[2, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 0.295201015541 * abs(var1[3, 0]) + 7.12880416635 * abs(var1[3, 1]) + 7.98478467285 * abs(var1[3, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 0.936461573265 * abs(var1[4, 0]) + 3.12291006946 * abs(var1[4, 1]) + 4.17613788791 * abs(var1[4, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 5.65080054283 * abs(var1[5, 0]) + 0.636098059059 * abs(var1[5, 1]) + 5.42468615719 * abs(var1[5, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 5.14669434987 * abs(var1[6, 0]) + 2.2229696388 * abs(var1[6, 1]) + 8.69586365934 * abs(var1[6, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 9.73575441604 * abs(var1[7, 0]) + 9.54423617288 * abs(var1[7, 1]) + 6.58767742037 * abs(var1[7, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 2.72118620664 * abs(var1[8, 0]) + 0.415074468 * abs(var1[8, 1]) + 9.044977484 * abs(var1[8, 2])
+CONVEX
+POSITIVE
+0.0
+0.0 + 3.29778302092 * abs(var1[9, 0]) + 6.23737730002 * abs(var1[9, 1]) + 3.34347155115 * abs(var1[9, 2])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 0]) + abs(var1[1, 0]) + abs(var1[2, 0]) + abs(var1[3, 0]) + abs(var1[4, 0]) + abs(var1[5, 0]) + abs(var1[6, 0]) + abs(var1[7, 0]) + abs(var1[8, 0]) + abs(var1[9, 0])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 1]) + abs(var1[1, 1]) + abs(var1[2, 1]) + abs(var1[3, 1]) + abs(var1[4, 1]) + abs(var1[5, 1]) + abs(var1[6, 1]) + abs(var1[7, 1]) + abs(var1[8, 1]) + abs(var1[9, 1])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 2]) + abs(var1[1, 2]) + abs(var1[2, 2]) + abs(var1[3, 2]) + abs(var1[4, 2]) + abs(var1[5, 2]) + abs(var1[6, 2]) + abs(var1[7, 2]) + abs(var1[8, 2]) + abs(var1[9, 2])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 3]) + abs(var1[1, 3]) + abs(var1[2, 3]) + abs(var1[3, 3]) + abs(var1[4, 3]) + abs(var1[5, 3]) + abs(var1[6, 3]) + abs(var1[7, 3]) + abs(var1[8, 3]) + abs(var1[9, 3])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 4]) + abs(var1[1, 4]) + abs(var1[2, 4]) + abs(var1[3, 4]) + abs(var1[4, 4]) + abs(var1[5, 4]) + abs(var1[6, 4]) + abs(var1[7, 4]) + abs(var1[8, 4]) + abs(var1[9, 4])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 5]) + abs(var1[1, 5]) + abs(var1[2, 5]) + abs(var1[3, 5]) + abs(var1[4, 5]) + abs(var1[5, 5]) + abs(var1[6, 5]) + abs(var1[7, 5]) + abs(var1[8, 5]) + abs(var1[9, 5])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 6]) + abs(var1[1, 6]) + abs(var1[2, 6]) + abs(var1[3, 6]) + abs(var1[4, 6]) + abs(var1[5, 6]) + abs(var1[6, 6]) + abs(var1[7, 6]) + abs(var1[8, 6]) + abs(var1[9, 6])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 7]) + abs(var1[1, 7]) + abs(var1[2, 7]) + abs(var1[3, 7]) + abs(var1[4, 7]) + abs(var1[5, 7]) + abs(var1[6, 7]) + abs(var1[7, 7]) + abs(var1[8, 7]) + abs(var1[9, 7])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 8]) + abs(var1[1, 8]) + abs(var1[2, 8]) + abs(var1[3, 8]) + abs(var1[4, 8]) + abs(var1[5, 8]) + abs(var1[6, 8]) + abs(var1[7, 8]) + abs(var1[8, 8]) + abs(var1[9, 8])
+CONVEX
+POSITIVE
+0.0 + abs(var1[0, 9]) + abs(var1[1, 9]) + abs(var1[2, 9]) + abs(var1[3, 9]) + abs(var1[4, 9]) + abs(var1[5, 9]) + abs(var1[6, 9]) + abs(var1[7, 9]) + abs(var1[8, 9]) + abs(var1[9, 9])
+CONVEX
+POSITIVE
+abs(var1[0, 0])
+CONVEX
+POSITIVE
+abs(var1[0, 1])
+CONVEX
+POSITIVE
+abs(var1[0, 2])
+CONVEX
+POSITIVE
+abs(var1[0, 3])
+CONVEX
+POSITIVE
+abs(var1[0, 4])
+CONVEX
+POSITIVE
+abs(var1[0, 5])
+CONVEX
+POSITIVE
+abs(var1[0, 6])
+CONVEX
+POSITIVE
+abs(var1[0, 7])
+CONVEX
+POSITIVE
+abs(var1[0, 8])
+CONVEX
+POSITIVE
+abs(var1[0, 9])
+CONVEX
+POSITIVE
+abs(var1[1, 0])
+CONVEX
+POSITIVE
+abs(var1[1, 1])
+CONVEX
+POSITIVE
+abs(var1[1, 2])
+CONVEX
+POSITIVE
+abs(var1[1, 3])
+CONVEX
+POSITIVE
+abs(var1[1, 4])
+CONVEX
+POSITIVE
+abs(var1[1, 5])
+CONVEX
+POSITIVE
+abs(var1[1, 6])
+CONVEX
+POSITIVE
+abs(var1[1, 7])
+CONVEX
+POSITIVE
+abs(var1[1, 8])
+CONVEX
+POSITIVE
+abs(var1[1, 9])
+CONVEX
+POSITIVE
+abs(var1[2, 0])
+CONVEX
+POSITIVE
+abs(var1[2, 1])
+CONVEX
+POSITIVE
+abs(var1[2, 2])
+CONVEX
+POSITIVE
+abs(var1[2, 3])
+CONVEX
+POSITIVE
+abs(var1[2, 4])
+CONVEX
+POSITIVE
+abs(var1[2, 5])
+CONVEX
+POSITIVE
+abs(var1[2, 6])
+CONVEX
+POSITIVE
+abs(var1[2, 7])
+CONVEX
+POSITIVE
+abs(var1[2, 8])
+CONVEX
+POSITIVE
+abs(var1[2, 9])
+CONVEX
+POSITIVE
+abs(var1[3, 0])
+CONVEX
+POSITIVE
+abs(var1[3, 1])
+CONVEX
+POSITIVE
+abs(var1[3, 2])
+CONVEX
+POSITIVE
+abs(var1[3, 3])
+CONVEX
+POSITIVE
+abs(var1[3, 4])
+CONVEX
+POSITIVE
+abs(var1[3, 5])
+CONVEX
+POSITIVE
+abs(var1[3, 6])
+CONVEX
+POSITIVE
+abs(var1[3, 7])
+CONVEX
+POSITIVE
+abs(var1[3, 8])
+CONVEX
+POSITIVE
+abs(var1[3, 9])
+CONVEX
+POSITIVE
+abs(var1[4, 0])
+CONVEX
+POSITIVE
+abs(var1[4, 1])
+CONVEX
+POSITIVE
+abs(var1[4, 2])
+CONVEX
+POSITIVE
+abs(var1[4, 3])
+CONVEX
+POSITIVE
+abs(var1[4, 4])
+CONVEX
+POSITIVE
+abs(var1[4, 5])
+CONVEX
+POSITIVE
+abs(var1[4, 6])
+CONVEX
+POSITIVE
+abs(var1[4, 7])
+CONVEX
+POSITIVE
+abs(var1[4, 8])
+CONVEX
+POSITIVE
+abs(var1[4, 9])
+CONVEX
+POSITIVE
+abs(var1[5, 0])
+CONVEX
+POSITIVE
+abs(var1[5, 1])
+CONVEX
+POSITIVE
+abs(var1[5, 2])
+CONVEX
+POSITIVE
+abs(var1[5, 3])
+CONVEX
+POSITIVE
+abs(var1[5, 4])
+CONVEX
+POSITIVE
+abs(var1[5, 5])
+CONVEX
+POSITIVE
+abs(var1[5, 6])
+CONVEX
+POSITIVE
+abs(var1[5, 7])
+CONVEX
+POSITIVE
+abs(var1[5, 8])
+CONVEX
+POSITIVE
+abs(var1[5, 9])
+CONVEX
+POSITIVE
+abs(var1[6, 0])
+CONVEX
+POSITIVE
+abs(var1[6, 1])
+CONVEX
+POSITIVE
+abs(var1[6, 2])
+CONVEX
+POSITIVE
+abs(var1[6, 3])
+CONVEX
+POSITIVE
+abs(var1[6, 4])
+CONVEX
+POSITIVE
+abs(var1[6, 5])
+CONVEX
+POSITIVE
+abs(var1[6, 6])
+CONVEX
+POSITIVE
+abs(var1[6, 7])
+CONVEX
+POSITIVE
+abs(var1[6, 8])
+CONVEX
+POSITIVE
+abs(var1[6, 9])
+CONVEX
+POSITIVE
+abs(var1[7, 0])
+CONVEX
+POSITIVE
+abs(var1[7, 1])
+CONVEX
+POSITIVE
+abs(var1[7, 2])
+CONVEX
+POSITIVE
+abs(var1[7, 3])
+CONVEX
+POSITIVE
+abs(var1[7, 4])
+CONVEX
+POSITIVE
+abs(var1[7, 5])
+CONVEX
+POSITIVE
+abs(var1[7, 6])
+CONVEX
+POSITIVE
+abs(var1[7, 7])
+CONVEX
+POSITIVE
+abs(var1[7, 8])
+CONVEX
+POSITIVE
+abs(var1[7, 9])
+CONVEX
+POSITIVE
+abs(var1[8, 0])
+CONVEX
+POSITIVE
+abs(var1[8, 1])
+CONVEX
+POSITIVE
+abs(var1[8, 2])
+CONVEX
+POSITIVE
+abs(var1[8, 3])
+CONVEX
+POSITIVE
+abs(var1[8, 4])
+CONVEX
+POSITIVE
+abs(var1[8, 5])
+CONVEX
+POSITIVE
+abs(var1[8, 6])
+CONVEX
+POSITIVE
+abs(var1[8, 7])
+CONVEX
+POSITIVE
+abs(var1[8, 8])
+CONVEX
+POSITIVE
+abs(var1[8, 9])
+CONVEX
+POSITIVE
+abs(var1[9, 0])
+CONVEX
+POSITIVE
+abs(var1[9, 1])
+CONVEX
+POSITIVE
+abs(var1[9, 2])
+CONVEX
+POSITIVE
+abs(var1[9, 3])
+CONVEX
+POSITIVE
+abs(var1[9, 4])
+CONVEX
+POSITIVE
+abs(var1[9, 5])
+CONVEX
+POSITIVE
+abs(var1[9, 6])
+CONVEX
+POSITIVE
+abs(var1[9, 7])
+CONVEX
+POSITIVE
+abs(var1[9, 8])
+CONVEX
+POSITIVE
+abs(var1[9, 9])
+CONVEX
+POSITIVE
+['ECOS_BB', 'SCS', 'ECOS', 'LS']
+Problem is not DCP(Disciplined Convex Program)
+None
