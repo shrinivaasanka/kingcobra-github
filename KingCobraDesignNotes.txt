@@ -370,5 +370,17 @@ Commits - KingCobra 64 bit and VIRGO Queue + KingCobra telnet requests - 17 Apri
         - http://sourceforge.net/p/asfer/code/HEAD/tree/asfer-docs/AstroInferDesign.txt and
         - https://github.com/shrinivaasanka/asfer-github-code/blob/master/asfer-docs/AstroInferDesign.txt
 
+-----------------------------------------------------------------------------------------------------------------
+(FEATURE-DONE) Commits - Convex Optimization - DCCP - 21 August 2017
+-----------------------------------------------------------------------------------------------------------------
+(*) import dccp has been added
+(*) DCCP is the recent advancement and generalization of DCP for convex-concave programs
+(*) method='dccp' has been added as parameter to solve()
+(*) Objective function has been changed to log() from logistic() - curvature is concave which is in conflict with definition of
+eisenberg-gale convex program in textbooks. Reason for this contradiction is unknown.
+(*) But DCCP overcomes the DCP limitation and solve() prints converged solutions for objective functions
+(*) logs have been committed to testlogs/
+(*) CVXOPT solver has been installed but it does not solve the Eisenberg-Gale objective function. Only SCS solver works - by default applies
+KKT conditions indirectly.
 
 
