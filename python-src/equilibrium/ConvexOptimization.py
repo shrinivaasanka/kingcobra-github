@@ -31,11 +31,11 @@
 import math
 from cvxpy import * 
 import numpy
+import dccp
 
 class ConvexOptimization(object):
 	def eisenberg_gale_convex_program(self,no_of_goods,no_of_buyers):
 		moneys=21234*numpy.random.rand(1,no_of_buyers)
-		print moneys
 		utilities=Variable(no_of_buyers,1)
 		goods_utilities=10*numpy.random.rand(no_of_goods,no_of_buyers)
 		goods_buyers=Variable(no_of_goods,no_of_buyers)
@@ -55,7 +55,7 @@ class ConvexOptimization(object):
 		eisenberg_gale_convex_function=0.0
 
 		for i in xrange(3):
-			eisenberg_gale_convex_function += logistic(utilities[i,0])*moneys[0,i]
+			eisenberg_gale_convex_function += log(utilities[i,0])*moneys[0,i]
 
 		print eisenberg_gale_convex_function
 		print "Curvature of Function:",eisenberg_gale_convex_function.curvature
@@ -71,7 +71,7 @@ class ConvexOptimization(object):
 		print "Goods and buyers matrix:"
 		print goods_buyers
 
-		#print "constraints:"
+		print "constraints:"
 		for i in xrange(no_of_buyers):
 			constraint=0.0
 			print constraint
@@ -100,13 +100,49 @@ class ConvexOptimization(object):
 				constraints.append(constraint >= 0)
 		
 		problem=Problem(objective,constraints)
+		print "====================================="
+		print "Installed Solvers:"
+		print "====================================="
 		print installed_solvers()
-		if problem.is_dcp():
-			problem.solve(solver=ECOS)
-		else:
-			print "Problem is not DCP(Disciplined Convex Program)"
-		print problem.value
+		print "Is Problem DCCP:",dccp.is_dccp(problem)
+		print "Solver used is SCS"
+		result=problem.solve(solver=SCS,method='dccp')
+		print "====================================="
+		print "Result:"
+		print "====================================="
+		print result
+		print "====================================="
+		print "Utilities:"
+		print "====================================="
+		for i in xrange(3):
+			print utilities[i,0].value
+		print "====================================="
+		print "Moneys:"
+		print "====================================="
+		for i in xrange(3):
+			print moneys[0,i]
+		print "====================================="
+		print "Per Buyer Good Allocation:"
+		print "====================================="
+		for i in xrange(no_of_buyers):
+			print "=================================="
+			print "Buyer:",i
+			print "=================================="
+			for j in xrange(no_of_goods):
+				print "Good:",j
+				print goods_buyers[i,j].value
+		print "====================================="
+		print "Per Good Utility for Each Buyer:"
+		print "====================================="
+		for i in xrange(no_of_buyers):
+			print "=================================="
+			print "Buyer:",i
+			print "=================================="
+			for j in xrange(no_of_goods):
+				print "Good:",j
+				print goods_utilities[i,j]
+
 
 if __name__=="__main__":
 	cvx=ConvexOptimization()
-	cvx.eisenberg_gale_convex_program(10,10)
+	cvx.eisenberg_gale_convex_program(3,3)
