@@ -383,4 +383,8 @@ eisenberg-gale convex program in textbooks. Reason for this contradiction is unk
 (*) CVXOPT solver has been installed but it does not solve the Eisenberg-Gale objective function. Only SCS solver works - by default applies
 KKT conditions indirectly.
 
-
+-----------------------------------------------------------------------------------------------------------------
+(FEATURE-DONE) Commits - Convex Optimization - DCCP - 22 August 2017
+-----------------------------------------------------------------------------------------------------------------
+(*) Verbose set to True for printing Splitting Conic Solver progress information
+(*) logs committed to testlogs/
