@@ -106,7 +106,7 @@ class ConvexOptimization(object):
 		print installed_solvers()
 		print "Is Problem DCCP:",dccp.is_dccp(problem)
 		print "Solver used is SCS"
-		result=problem.solve(solver=SCS,method='dccp')
+		result=problem.solve(solver=SCS,verbose=True,method='dccp')
 		print "====================================="
 		print "Result:"
 		print "====================================="
@@ -145,4 +145,4 @@ class ConvexOptimization(object):
 
 if __name__=="__main__":
 	cvx=ConvexOptimization()
-	cvx.eisenberg_gale_convex_program(3,3)
+	cvx.eisenberg_gale_convex_program(5,5)
