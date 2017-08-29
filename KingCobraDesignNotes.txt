@@ -388,3 +388,12 @@ KKT conditions indirectly.
 -----------------------------------------------------------------------------------------------------------------
 (*) Verbose set to True for printing Splitting Conic Solver progress information
 (*) logs committed to testlogs/
+
+---------------------------------------------------------------------------------------------------------------------------------------
+(FEATURE-DONE) Commits - Convex Optimization update - 29 August 2017
+---------------------------------------------------------------------------------------------------------------------------------------
+(*) Removed hardcoded variable values in objective and constraints
+(*) In the context of pricing, ECOS Error Metrics print the matrices of market clearing prices for goods 
+(Reference - pages 3072 and 3073 of https://web.stanford.edu/~boyd/papers/pdf/ecos_ecc.pdf - KKT conditions in ECOS solver)
+
+
