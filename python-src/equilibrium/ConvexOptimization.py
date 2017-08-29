@@ -32,6 +32,7 @@ import math
 from cvxpy import * 
 import numpy
 import dccp
+import cvxopt
 
 class ConvexOptimization(object):
 	def eisenberg_gale_convex_program(self,no_of_goods,no_of_buyers):
@@ -54,7 +55,7 @@ class ConvexOptimization(object):
 
 		eisenberg_gale_convex_function=0.0
 
-		for i in xrange(3):
+		for i in xrange(no_of_buyers):
 			eisenberg_gale_convex_function += log(utilities[i,0])*moneys[0,i]
 
 		print eisenberg_gale_convex_function
@@ -75,7 +76,7 @@ class ConvexOptimization(object):
 		for i in xrange(no_of_buyers):
 			constraint=0.0
 			print constraint
-			for j in xrange(3):
+			for j in xrange(no_of_goods):
 				constraint += goods_utilities[i,j]*abs(goods_buyers[i,j])
 			print constraint
 			print constraint.curvature
@@ -106,7 +107,16 @@ class ConvexOptimization(object):
 		print installed_solvers()
 		print "Is Problem DCCP:",dccp.is_dccp(problem)
 		print "Solver used is SCS"
+		args=problem.get_problem_data(SCS)
+		print "====================================="
+		print "CVXPY args:"
+		print "====================================="
+		print args
 		result=problem.solve(solver=SCS,verbose=True,method='dccp')
+		print "====================================="
+		print "Problem value:"
+		print "====================================="
+		print problem.value
 		print "====================================="
 		print "Result:"
 		print "====================================="
@@ -114,12 +124,12 @@ class ConvexOptimization(object):
 		print "====================================="
 		print "Utilities:"
 		print "====================================="
-		for i in xrange(3):
+		for i in xrange(no_of_buyers):
 			print utilities[i,0].value
 		print "====================================="
 		print "Moneys:"
 		print "====================================="
-		for i in xrange(3):
+		for i in xrange(no_of_buyers):
 			print moneys[0,i]
 		print "====================================="
 		print "Per Buyer Good Allocation:"
@@ -141,7 +151,6 @@ class ConvexOptimization(object):
 			for j in xrange(no_of_goods):
 				print "Good:",j
 				print goods_utilities[i,j]
-
 
 if __name__=="__main__":
 	cvx=ConvexOptimization()
