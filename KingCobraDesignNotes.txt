@@ -396,4 +396,12 @@ KKT conditions indirectly.
 (*) In the context of pricing, ECOS Error Metrics print the matrices of market clearing prices for goods 
 (Reference - pages 3072 and 3073 of https://web.stanford.edu/~boyd/papers/pdf/ecos_ecc.pdf - KKT conditions in ECOS solver)
 
+----------------------------------------------------------------------------------------------------------------------------------
+(FEATURE-DONE) Convex Optimization - Pricing Computation - 30 August 2017
+----------------------------------------------------------------------------------------------------------------------------------
+(*) Prices of Goods/Services have been computed explicitly from Karush-Kuhn-Tucker Conditions (1,2,3 and especially 4)
+(*) References: 
+	- Pages 106-108 of http://www.cs.cmu.edu/~sandholm/cs15-892F13/algorithmic-game-theory.pdf)
+	- KKT conditions and Conic Optimization- https://arxiv.org/pdf/1312.3039.pdf
+(*) logs committed to testlogs/
 
