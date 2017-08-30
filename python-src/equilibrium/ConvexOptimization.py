@@ -67,6 +67,8 @@ class ConvexOptimization(object):
 
 		constraints=[]
 
+		print "Number of Goods:",no_of_goods
+		print "Number of Buyers:",no_of_buyers
 		print "Per unit Goods utilities matrix:"
 		print goods_utilities
 		print "Goods and buyers matrix:"
@@ -151,7 +153,21 @@ class ConvexOptimization(object):
 			for j in xrange(no_of_goods):
 				print "Good:",j
 				print goods_utilities[i,j]
+		print "======================================"
+		print "Per Good Market Clearing Price (from Karush-Kuhn-Tucker conditions):"
+		print "======================================"
+		prices=[]	
+		for b in xrange(no_of_buyers):
+			for g in xrange(no_of_goods):
+				b1=b
+				for g1 in xrange(no_of_goods):
+						per_buyer_objective = goods_utilities[b1,g1] * goods_buyers[b1,g1]
+				#print "Per buyer objective:",per_buyer_objective.value
+				priceg = goods_utilities[g,b] * moneys[0,b] / (per_buyer_objective.value)
+				prices.append(priceg)
+		for g in xrange(no_of_goods):
+			print "Good ",g," Market Clearing Price From Eisenberg-Gale Convex Program:",prices[g]
 
 if __name__=="__main__":
 	cvx=ConvexOptimization()
-	cvx.eisenberg_gale_convex_program(5,5)
+	cvx.eisenberg_gale_convex_program(10,10)
